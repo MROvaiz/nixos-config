@@ -1,0 +1,3 @@
+{
+  bluetooth = import ./bluetooth.nix;
+}

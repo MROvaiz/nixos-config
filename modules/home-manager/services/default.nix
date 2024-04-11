@@ -1,0 +1,3 @@
+{
+  rclone = import ./rclone.nix;
+}
