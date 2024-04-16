@@ -22,6 +22,7 @@
     outputs.nixosModules.apps.thunar
     outputs.nixosModules.apps.transmission
     outputs.nixosModules.apps.virtualisation
+    outputs.nixosModules.apps.vlc
     # Desktop
     outputs.nixosModules.desktop.hyprland
     outputs.nixosModules.desktop.lightdm

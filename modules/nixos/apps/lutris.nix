@@ -5,6 +5,8 @@
     (lutris.override {
       extraLibraries = pkgs: [
         # List library dependencies here
+        gamescope
+        mangohud
       ];
       extraPkgs = pkgs: [
         # List package dependencies here
@@ -13,6 +15,8 @@
         libvdpau
         libsoup
         libusb1
+        gamescope
+        mangohud
       ];
     })
   ];

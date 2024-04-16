@@ -36,12 +36,12 @@ in {
       xwayland = {force_zero_scaling = true;};
       input = {
         kb_layout = "us";
-        follow_mouse = 1;
+        follow_mouse = true;
         sensitivity = 0;
-        # force_no_accel = 1;
+        force_no_accel = true;
         accel_profile = "flat";
         touchpad = {
-          natural_scroll = 0;
+          natural_scroll = false;
         };
       };
       general = {
