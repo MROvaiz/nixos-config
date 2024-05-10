@@ -23,7 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland/main";
     hyprwm-contrib.url = "github:hyprwm/contrib";
 
     # Shameless plug: looking for a way to nixify your themes and make
@@ -88,6 +88,24 @@
           }
         ];
       };
+      nixwork = nixpkgs-unstable.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main nixos configuration file <
+          ./nixos/nixwork/configuration.nix
+
+          # Import home-manager's NixOS module
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              # useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {inherit inputs outputs;};
+              users.mro = import ./home-manager/nixwork/home.nix;
+            };
+          }
+        ];
+      };
     };
 
     # Standalone home-manager configuration entrypoint
@@ -100,6 +118,14 @@
         modules = [
           # > Our main home-manager configuration file <
           ./home-manager/nixbin/home.nix
+        ];
+      };
+      "mro@nixwork" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs-unstable.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/nixwork/home.nix
         ];
       };
     };

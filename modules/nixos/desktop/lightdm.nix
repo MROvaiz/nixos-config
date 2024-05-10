@@ -1,17 +1,10 @@
 {...}: {
-  # Enable the DisplayManager.
+  # Enable the DisplayManager LightDM.
   services = {
-    displayManager = {
-      autoLogin.enable = true;
-      autoLogin.user = "mro";
-      defaultSession = "hyprland";
-    };
     xserver = {
       enable = true;
       displayManager = {
-        lightdm = {
-          enable = true;
-        };
+        lightdm = {enable = true;};
       };
     };
   };

@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   pkgs,
   self,
   ...
@@ -16,6 +17,10 @@
     ${pkgs.swww}/bin/swww img ${wallpaper}
   '';
 in {
+  # Get Latest git version for hyprland
+  imports = [
+    inputs.hyprland.homeManagerModules.default
+  ];
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
