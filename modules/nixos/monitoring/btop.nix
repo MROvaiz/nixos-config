@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    btop
+    (btop.override {rocmSupport = true;})
     nvtopPackages.amd
   ];
 }

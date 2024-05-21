@@ -37,7 +37,7 @@
 
     "hyprland/window" = {
       format = "{}";
-      max-length = 10;
+      max-length = 50;
     };
     "hyprland/workspaces" = {
       active-only = false;
