@@ -29,6 +29,7 @@
     # Terminal
     outputs.nixosModules.terminal.devenv
     outputs.nixosModules.terminal.git
+    outputs.nixosModules.terminal.locale
 
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
