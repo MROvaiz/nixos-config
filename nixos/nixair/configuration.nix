@@ -16,34 +16,24 @@
     outputs.nixosModules.fonts
     # Apps
     outputs.nixosModules.apps.firefox
-    outputs.nixosModules.apps.lutris
-    outputs.nixosModules.apps.openrgb
-    outputs.nixosModules.apps.steam
-    outputs.nixosModules.apps.thunar
     outputs.nixosModules.apps.transmission
-    outputs.nixosModules.apps.virtualisation
-    outputs.nixosModules.apps.vlc
     # Desktop
-    outputs.nixosModules.desktop.hyprland
-    outputs.nixosModules.desktop.lightdm
+    outputs.nixosModules.desktop.gdm
+    outputs.nixosModules.desktop.gnome
     # Hardware
-    outputs.nixosModules.hardware.harddisk
     outputs.nixosModules.hardware.mouse
     outputs.nixosModules.hardware.sound
-    outputs.nixosModules.hardware.video
     # Monitoring
     outputs.nixosModules.monitoring.btop
     outputs.nixosModules.monitoring.vnstat
-    # Networking
-    outputs.nixosModules.networking.bluetooth
     # Terminal
     outputs.nixosModules.terminal.git
-    outputs.nixosModules.terminal.utils
+    outputs.nixosModules.terminal.locale
 
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
     # inputs.hardware.nixosModules.common-ssd
-    inputs.hardware.nixosModules.common-gpu-amd
+    inputs.hardware.nixosModules.lenovo-ideapad-15alc6
 
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
@@ -113,11 +103,10 @@
       options = "--delete-older-than 10d";
     };
   };
-
   # FIXME: Add the rest of your current configuration
 
   # TODO: Set your hostname
-  networking.hostName = "nixbin";
+  networking.hostName = "nixair";
 
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -144,7 +133,7 @@
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
     # FIXME: Replace with your username
-    mro = {
+    amf = {
       # TODO: You can set an initial password for your user.
       # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
       # Be sure to change it (using passwd) after rebooting!
@@ -170,10 +159,9 @@
   services.openssh = {
     enable = true;
     settings = {
-      # Opinionated: forbid root login through SSH.
+      # Forbid root login through SSH.
       PermitRootLogin = "no";
-      # Opinionated: use keys only.
-      # Remove if you want to SSH using passwords
+      # Use keys only. Remove if you want to SSH using password (not recommended)
       PasswordAuthentication = false;
     };
   };

@@ -173,8 +173,9 @@ in {
         "center,class:^(virt-manager)$,title:^(Virtual Machine Manager)$"
 
         # Lutris Window rules
-        "float,class:^(lutris)$,title:^(lutris)$"
+        "float,class:^(lutris)$,title:^(Lutris)$"
         "nomaxsize,class:^(dxwsetup.exe)$"
+        "float,class:^(epicgameslauncher.exe)$,title:^(Epic Games Launcher)$"
 
         # Kitty Window rules
         "opacity 0.8 0.8,class:^(kitty)$"
@@ -195,8 +196,8 @@ in {
         "move 38% 0.5%,class:^(firefox)$,title:^(Firefox — Sharing Indicator)$"
 
         # Utility
-        "float,class:^(.blueman-manager-wrapped)$,title:^(Bluetooth Devices)$"
-        "size 25% 25%,class:^(.blueman-manager-wrapped)$,title:^(Bluetooth Devices)$"
+        "float,class:^(.blueman-manager-wrapped)$"
+        "size 25% 25%,class:^(.blueman-manager-wrapped)$"
         "float,class:^(openrgb)$,title:^(OpenRGB)$"
       ];
     };

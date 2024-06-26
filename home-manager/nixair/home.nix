@@ -13,24 +13,11 @@
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
     # Apps
-    outputs.homeManagerModules.apps.discord
     outputs.homeManagerModules.apps.gimp
-    outputs.homeManagerModules.apps.kitty
-    outputs.homeManagerModules.apps.kodi
-    outputs.homeManagerModules.apps.obs
     outputs.homeManagerModules.apps.obsidian
     outputs.homeManagerModules.apps.vscode
     # Desktop
-    outputs.homeManagerModules.desktop.hyprland
-    outputs.homeManagerModules.desktop.rofi
-    outputs.homeManagerModules.desktop.swayidle_lock
-    outputs.homeManagerModules.desktop.themes
-    outputs.homeManagerModules.desktop.waybar
-    # Services
-    # outputs.homeManagerModules.services.rclone # Disable
-    # Settings
-    outputs.homeManagerModules.settings.sound
-    outputs.homeManagerModules.settings.virtmanager
+    # TODO: gnome config?
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
@@ -68,8 +55,8 @@
 
   # TODO: Set your username
   home = {
-    username = "mro";
-    homeDirectory = "/home/mro";
+    username = "amf";
+    homeDirectory = "/home/amf";
   };
 
   # Add stuff for your user as you see fit:
@@ -80,8 +67,6 @@
   programs.home-manager.enable = true;
   programs.git = {
     enable = true;
-    userName = "MROvaiz";
-    userEmail = "rahilovaiz@gmail.com";
   };
 
   # Nicely reload system units when changing configs

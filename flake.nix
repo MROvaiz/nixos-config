@@ -106,6 +106,24 @@
           }
         ];
       };
+      nixair = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main nixos configuration file <
+          ./nixos/nixair/configuration.nix
+
+          # Import home-manager's NixOS module
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              # useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {inherit inputs outputs;};
+              users.mro = import ./home-manager/nixair/home.nix;
+            };
+          }
+        ];
+      };
     };
 
     # Standalone home-manager configuration entrypoint
