@@ -21,6 +21,7 @@
     outputs.nixosModules.desktop.gdm
     outputs.nixosModules.desktop.gnome
     # Hardware
+    outputs.nixosModules.hardware.automout
     outputs.nixosModules.hardware.mouse
     outputs.nixosModules.hardware.sound
     # Monitoring
@@ -139,6 +140,7 @@
       # TODO: You can set an initial password for your user.
       # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
       # Be sure to change it (using passwd) after rebooting!
+      description = "Aira Mehvish";
       initialPassword = "open";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [
