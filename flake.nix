@@ -119,7 +119,7 @@
               # useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = {inherit inputs outputs;};
-              users.mro = import ./home-manager/nixair/home.nix;
+              users.amf = import ./home-manager/nixair/home.nix;
             };
           }
         ];
@@ -144,6 +144,14 @@
         modules = [
           # > Our main home-manager configuration file <
           ./home-manager/nixwork/home.nix
+        ];
+      };
+      "amf@nixair" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/nixair/home.nix
         ];
       };
     };
