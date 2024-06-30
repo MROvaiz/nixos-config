@@ -28,6 +28,7 @@
     outputs.nixosModules.desktop.lightdm
     # Hardware
     outputs.nixosModules.hardware.harddisk
+    outputs.nixosModules.hardware.printer
     outputs.nixosModules.hardware.mouse
     outputs.nixosModules.hardware.sound
     outputs.nixosModules.hardware.video

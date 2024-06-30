@@ -1,9 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   # Enable Printer.
-  services.printing.enable = true;
-  services.avahi = {
+  services.printing = {
     enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
+    drivers = [pkgs.epson-201401w];
   };
 }
