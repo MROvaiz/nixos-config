@@ -22,6 +22,7 @@
     outputs.nixosModules.desktop.gnome
     # Hardware
     outputs.nixosModules.hardware.automout
+    outputs.nixosModules.hardware.printer
     outputs.nixosModules.hardware.mouse
     outputs.nixosModules.hardware.sound
     # Monitoring
