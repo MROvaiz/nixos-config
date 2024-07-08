@@ -37,7 +37,7 @@
     outputs.nixosModules.monitoring.vnstat
     # Networking
     outputs.nixosModules.networking.bluetooth
-    outputs.nixosModules.networking.openvpn
+    outputs.nixosModules.networking.wireguard
     # Terminal
     outputs.nixosModules.terminal.git
     outputs.nixosModules.terminal.sops
