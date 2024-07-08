@@ -1,6 +1,3 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    # Torrent transmission.
-    transmission
-  ];
+  environment.systemPackages = with pkgs; [transmission_4-gtk];
 }

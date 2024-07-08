@@ -37,8 +37,10 @@
     outputs.nixosModules.monitoring.vnstat
     # Networking
     outputs.nixosModules.networking.bluetooth
+    outputs.nixosModules.networking.openvpn
     # Terminal
     outputs.nixosModules.terminal.git
+    outputs.nixosModules.terminal.sops
     outputs.nixosModules.terminal.utils
 
     # Or modules from other flakes (such as nixos-hardware):
