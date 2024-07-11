@@ -16,6 +16,7 @@
     outputs.nixosModules.fonts
     # Apps
     outputs.nixosModules.apps.firefox
+    outputs.nixosModules.apps.flatpak
     outputs.nixosModules.apps.lutris
     outputs.nixosModules.apps.openrgb
     outputs.nixosModules.apps.steam
