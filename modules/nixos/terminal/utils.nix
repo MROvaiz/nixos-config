@@ -11,7 +11,7 @@
     zip
     unzip
     unrar
-    magic-wormhole
+    # magic-wormhole
     ani-cli
     inputs.alejandra.defaultPackage.${system}
 

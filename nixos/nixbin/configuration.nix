@@ -163,6 +163,7 @@
         "wheel"
         "fuse"
         "libvirtd"
+        "transmission"
       ];
     };
   };

@@ -1,9 +1,9 @@
 {pkgs, ...}: {
   # Video Drivers
   hardware = {
-    opengl = {
-      driSupport = true;
-      driSupport32Bit = true;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
       extraPackages = with pkgs; [
         vaapiVdpau
         libvdpau-va-gl
