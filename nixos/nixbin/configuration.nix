@@ -15,6 +15,7 @@
     outputs.nixosModules.clipboard
     outputs.nixosModules.fonts
     # Apps
+    outputs.nixosModules.apps.brave
     outputs.nixosModules.apps.droidcam
     outputs.nixosModules.apps.firefox
     outputs.nixosModules.apps.flatpak
@@ -22,7 +23,7 @@
     outputs.nixosModules.apps.openrgb
     outputs.nixosModules.apps.steam
     outputs.nixosModules.apps.thunar
-    # outputs.nixosModules.apps.transmission
+    outputs.nixosModules.apps.transmission
     outputs.nixosModules.apps.virtualisation
     outputs.nixosModules.apps.vlc
     # Desktop

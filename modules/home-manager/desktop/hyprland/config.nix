@@ -182,6 +182,9 @@
         "center,class:^(firefox)$,title:^(Sign in – Google accounts — Mozilla Firefox)$"
         "move 38% 0.5%,class:^(firefox)$,title:^(Firefox — Sharing Indicator)$"
 
+        # Transmission
+        "float,class:^(transmission-gtk)$,title:^(Transmission)$"
+
         # Utility
         "float,class:^(.blueman-manager-wrapped)$"
         "size 25% 25%,class:^(.blueman-manager-wrapped)$"

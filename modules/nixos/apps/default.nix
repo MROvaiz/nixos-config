@@ -1,4 +1,5 @@
 {
+  brave = import ./brave.nix;
   droidcam = import ./droidcam.nix;
   firefox = import ./firefox.nix;
   flatpak = import ./flatpak.nix;
