@@ -22,8 +22,8 @@
     outputs.homeManagerModules.apps.vscode
     # Desktop
     outputs.homeManagerModules.desktop.hyprland
+    outputs.homeManagerModules.desktop.hyprlock
     outputs.homeManagerModules.desktop.rofi
-    outputs.homeManagerModules.desktop.swayidle_lock
     outputs.homeManagerModules.desktop.themes
     outputs.homeManagerModules.desktop.waybar
     # Services

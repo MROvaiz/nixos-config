@@ -5,11 +5,6 @@
   ...
 }: {
   home.packages = with pkgs; [
-    # wallpaper
-    swww
-    # idle/lock
-    swaylock-effects
-
     # utils and misc
     wf-recorder
     wl-clipboard

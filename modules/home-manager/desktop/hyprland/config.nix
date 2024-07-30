@@ -4,19 +4,7 @@
   pkgs,
   self,
   ...
-}: let
-  wallpaper = builtins.fetchurl {
-    url = "https://raw.githubusercontent.com/MROvaiz/wallpapers/main/earth-above.jpg";
-    sha256 = "15z8imzgi68vy3fv70x3fkvsmm313rfgjmjvbzwi7mar3dcizqaa";
-  };
-  swww-script = pkgs.writeShellScript "swww-script" ''
-    # have pre-start here itself
-    ${pkgs.swww}/bin/swww init &
-
-    # Start Service here
-    ${pkgs.swww}/bin/swww img ${wallpaper}
-  '';
-in {
+}: {
   # Get Latest git version for hyprland
   imports = [
     inputs.hyprland.homeManagerModules.default
@@ -36,7 +24,6 @@ in {
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "blueman-applet & nm-applet --indicator"
         "waybar"
-        swww-script
       ];
       xwayland = {force_zero_scaling = true;};
       input = {
@@ -88,9 +75,9 @@ in {
         pseudotile = true;
         preserve_split = true;
       };
-      master = {
-        new_is_master = true;
-      };
+      # master = {
+      #   new_is_master = true;
+      # };
       gestures = {
         workspace_swipe = false;
       };
@@ -99,7 +86,7 @@ in {
         "$MOD, Q, exec, kitty"
         "$MOD, C, killactive"
         "$MOD, M, exit"
-        "$MOD, L, exec, swaylock -Ff"
+        "$MOD, L, exec, hyprlock"
         "$MOD, E, exec, thunar"
         "$MOD, V, togglefloating"
         "$MOD, SPACE, exec, rofi -show drun"

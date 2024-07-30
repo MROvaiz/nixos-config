@@ -1,4 +1,5 @@
 {
+  droidcam = import ./droidcam.nix;
   firefox = import ./firefox.nix;
   flatpak = import ./flatpak.nix;
   lutris = import ./lutris.nix;

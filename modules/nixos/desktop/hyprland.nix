@@ -12,10 +12,7 @@
     enable = true;
     xwayland.enable = true;
   };
-  security = {
-    # allow wayland lockers to unlock the screen
-    pam.services.swaylock.text = "auth include login";
-  };
+  security.pam.services.hyprlock = {};
   # auto login for hyprland
   services = {
     displayManager = {

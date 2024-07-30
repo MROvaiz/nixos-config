@@ -15,18 +15,19 @@
     outputs.nixosModules.clipboard
     outputs.nixosModules.fonts
     # Apps
+    outputs.nixosModules.apps.droidcam
     outputs.nixosModules.apps.firefox
     outputs.nixosModules.apps.flatpak
     outputs.nixosModules.apps.lutris
     outputs.nixosModules.apps.openrgb
     outputs.nixosModules.apps.steam
     outputs.nixosModules.apps.thunar
-    outputs.nixosModules.apps.transmission
+    # outputs.nixosModules.apps.transmission
     outputs.nixosModules.apps.virtualisation
     outputs.nixosModules.apps.vlc
     # Desktop
     outputs.nixosModules.desktop.hyprland
-    outputs.nixosModules.desktop.lightdm
+    outputs.nixosModules.desktop.sddm
     # Hardware
     outputs.nixosModules.hardware.harddisk
     outputs.nixosModules.hardware.printer
@@ -41,7 +42,7 @@
     outputs.nixosModules.networking.wireguard
     # Terminal
     outputs.nixosModules.terminal.git
-    outputs.nixosModules.terminal.sops
+    # outputs.nixosModules.terminal.sops
     outputs.nixosModules.terminal.utils
 
     # Or modules from other flakes (such as nixos-hardware):
@@ -163,7 +164,6 @@
         "wheel"
         "fuse"
         "libvirtd"
-        "transmission"
       ];
     };
   };

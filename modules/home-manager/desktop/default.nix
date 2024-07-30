@@ -1,7 +1,7 @@
 {
   hyprland = import ./hyprland;
+  hyprlock = import ./hyprlock;
   rofi = import ./rofi;
-  swayidle_lock = import ./swayidle_lock;
   themes = import ./themes;
   waybar = import ./waybar;
 }
