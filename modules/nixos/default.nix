@@ -22,6 +22,9 @@
   # Networking
   networking = import ./networking;
 
+  # Service
+  service = import ./service;
+
   # Terminal
   terminal = import ./terminal;
 }

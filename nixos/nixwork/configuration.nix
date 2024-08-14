@@ -26,6 +26,11 @@
     # Monitoring
     outputs.nixosModules.monitoring.btop
     outputs.nixosModules.monitoring.vnstat
+    # Networking
+    outputs.nixosModules.networking.tailscale
+    # Service
+    outputs.nixosModules.service.docker
+    outputs.nixosModules.service.jellyfin
     # Terminal
     outputs.nixosModules.terminal.devenv
     outputs.nixosModules.terminal.git

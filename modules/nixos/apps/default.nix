@@ -2,7 +2,6 @@
   brave = import ./brave.nix;
   droidcam = import ./droidcam.nix;
   firefox = import ./firefox.nix;
-  flatpak = import ./flatpak.nix;
   lutris = import ./lutris.nix;
   openrgb = import ./openrgb.nix;
   steam = import ./steam.nix;

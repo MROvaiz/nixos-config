@@ -18,7 +18,6 @@
     outputs.nixosModules.apps.brave
     outputs.nixosModules.apps.droidcam
     outputs.nixosModules.apps.firefox
-    outputs.nixosModules.apps.flatpak
     outputs.nixosModules.apps.lutris
     outputs.nixosModules.apps.openrgb
     outputs.nixosModules.apps.steam
@@ -40,7 +39,10 @@
     outputs.nixosModules.monitoring.vnstat
     # Networking
     outputs.nixosModules.networking.bluetooth
+    outputs.nixosModules.networking.tailscale
     outputs.nixosModules.networking.wireguard
+    # Service
+    outputs.nixosModules.service.flatpak
     # Terminal
     outputs.nixosModules.terminal.git
     # outputs.nixosModules.terminal.sops
