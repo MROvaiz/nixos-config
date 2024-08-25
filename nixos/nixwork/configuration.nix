@@ -27,6 +27,7 @@
     outputs.nixosModules.monitoring.btop
     outputs.nixosModules.monitoring.vnstat
     # Networking
+    outputs.nixosModules.networking.nfs
     outputs.nixosModules.networking.tailscale
     # Service
     outputs.nixosModules.service.docker
