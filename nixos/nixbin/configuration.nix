@@ -39,6 +39,7 @@
     outputs.nixosModules.monitoring.vnstat
     # Networking
     outputs.nixosModules.networking.bluetooth
+    outputs.nixosModules.networking.nfs
     outputs.nixosModules.networking.tailscale
     outputs.nixosModules.networking.wireguard
     # Service
