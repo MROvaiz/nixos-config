@@ -39,9 +39,11 @@
     outputs.nixosModules.monitoring.vnstat
     # Networking
     outputs.nixosModules.networking.bluetooth
+    outputs.nixosModules.networking.iperf3
     outputs.nixosModules.networking.nfs
     outputs.nixosModules.networking.tailscale
     outputs.nixosModules.networking.wireguard
+    outputs.nixosModules.networking.zerotier
     # Service
     outputs.nixosModules.service.flatpak
     # Terminal
