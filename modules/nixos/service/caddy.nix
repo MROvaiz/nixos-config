@@ -1,15 +1,18 @@
 {pkgs, ...}: {
-  networking.firewall.allowedTCPPorts = [80 443];
   services.caddy = {
-    enable = true;
-    virtualHosts = {
-      "jellyfin.sample1.duckdns.org".extraConfig = ''
-        reverse_proxy localhost:8096
-        tls {
-          dns duckdns $DUCKDNS_TOKEN
-          resolvers 1.1.1.1
+    package = pkgs.caddy-custom.override {
+      externalPlugins = [
+        {
+          name = "duckdns";
+          repo = "github.com/caddy-dns/duckdns";
+          version = "v0.4.0";
         }
-      '';
+      ];
+      vendorHash = "sha256-7cRI65foALEsfYhvdGresq7oma/cIsnVtbq+Gan5DCU=";
     };
+    virtualHosts."example.org:80".extraConfig = ''
+      respond "Hello, world!"
+      tls internal
+    '';
   };
 }

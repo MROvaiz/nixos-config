@@ -45,6 +45,7 @@
     outputs.nixosModules.networking.wireguard
     outputs.nixosModules.networking.zerotier
     # Service
+    outputs.nixosModules.service.caddy
     outputs.nixosModules.service.flatpak
     # Terminal
     outputs.nixosModules.terminal.git
