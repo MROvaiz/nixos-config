@@ -25,15 +25,15 @@
     outputs.nixosModules.hardware.sound
     # Monitoring
     outputs.nixosModules.monitoring.btop
+    outputs.nixosModules.monitoring.iperf3
     outputs.nixosModules.monitoring.vnstat
     # Networking
-    outputs.nixosModules.networking.iperf3
     outputs.nixosModules.networking.nfs
     outputs.nixosModules.networking.tailscale
-    outputs.nixosModules.networking.zerotier
+    # outputs.nixosModules.networking.zerotier
     # Service
     outputs.nixosModules.service.caddy
-    outputs.nixosModules.service.docker
+    # outputs.nixosModules.service.docker
     outputs.nixosModules.service.jellyfin
     # Terminal
     outputs.nixosModules.terminal.devenv
