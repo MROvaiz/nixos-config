@@ -32,6 +32,7 @@
     outputs.nixosModules.networking.tailscale
     outputs.nixosModules.networking.zerotier
     # Service
+    outputs.nixosModules.service.caddy
     outputs.nixosModules.service.docker
     outputs.nixosModules.service.jellyfin
     # Terminal
