@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   services.caddy = {
+    enable = true;
     package = pkgs.caddy-custom.override {
       externalPlugins = [
         {
@@ -8,11 +9,15 @@
           version = "v0.4.0";
         }
       ];
-      vendorHash = "sha256-7cRI65foALEsfYhvdGresq7oma/cIsnVtbq+Gan5DCU=";
+      vendorHash = "sha256-UBn/jQIoi9yq3ZLd+LvDM7PUE0kqP0GKTU+oQIdHztw=";
     };
-    virtualHosts."example.org:80".extraConfig = ''
-      respond "Hello, world!"
-      tls internal
+    virtualHosts."jellyfin.sample1.duckdns.org".extraConfig = ''
+      reverse_proxy http://localhost:8096
+      tls {
+        dns duckdns $DUCKDNS_TOKEN {
+          override_domain sample1.duckdns.org
+        }
+      }
     '';
   };
 }
