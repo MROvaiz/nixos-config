@@ -28,6 +28,8 @@
     # Desktop
     outputs.nixosModules.desktop.hyprland
     outputs.nixosModules.desktop.sddm
+    # Development
+    outputs.nixosModules.development.flutter
     # Hardware
     outputs.nixosModules.hardware.harddisk
     outputs.nixosModules.hardware.printer
@@ -45,7 +47,10 @@
     outputs.nixosModules.networking.wireguard
     # outputs.nixosModules.networking.zerotier
     # Service
+    outputs.nixosModules.service.caddy
+    # outputs.nixosModules.service.docker
     outputs.nixosModules.service.flatpak
+    outputs.nixosModules.service.jellyfin
     # Terminal
     outputs.nixosModules.terminal.git
     # outputs.nixosModules.terminal.sops

@@ -1,6 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   services.caddy = {
     enable = true;
+    email = "rahilovaiz@gmail.com";
+    logFormat = "output file /var/log/caddy/error.log";
     package = pkgs.caddy-custom.override {
       externalPlugins = [
         {
@@ -11,13 +17,17 @@
       ];
       vendorHash = "sha256-UBn/jQIoi9yq3ZLd+LvDM7PUE0kqP0GKTU+oQIdHztw=";
     };
-    virtualHosts."jellyfin.sample1.duckdns.org".extraConfig = ''
-      reverse_proxy http://localhost:8096
-      tls {
-        dns duckdns $DUCKDNS_TOKEN {
-          override_domain sample1.duckdns.org
+    virtualHosts = {
+      # reverse_proxy is actual ip, which added in duckdns.
+      # token is static token added.
+      "jellyfin.mrovaiz.duckdns.org".extraConfig = ''
+        reverse_proxy localhost:8096
+        tls {
+          dns duckdns $DUCKDNS_TOKEN {
+            override_domain mrovaiz.duckdns.org
+          }
         }
-      }
-    '';
+      '';
+    };
   };
 }

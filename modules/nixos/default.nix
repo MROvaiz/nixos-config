@@ -13,6 +13,9 @@
   # Desktop
   desktop = import ./desktop;
 
+  # Development
+  development = import ./development;
+
   # Hardware
   hardware = import ./hardware;
 
