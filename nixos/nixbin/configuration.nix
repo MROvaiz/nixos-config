@@ -29,7 +29,7 @@
     outputs.nixosModules.desktop.hyprland
     outputs.nixosModules.desktop.sddm
     # Development
-    outputs.nixosModules.development.flutter
+    # outputs.nixosModules.development.flutter
     # Hardware
     outputs.nixosModules.hardware.harddisk
     outputs.nixosModules.hardware.printer
