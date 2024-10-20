@@ -52,6 +52,7 @@
     outputs.nixosModules.service.flatpak
     outputs.nixosModules.service.jellyfin
     # Terminal
+    outputs.nixosModules.terminal.devenv
     outputs.nixosModules.terminal.git
     # outputs.nixosModules.terminal.sops
     outputs.nixosModules.terminal.utils
@@ -115,6 +116,7 @@
         "fufexan.cachix.org-1:LwCDjCJNJQf5XD2BV+yamQIMZfcKWR9ISIFy5curUsY="
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       ];
+      trusted-users = ["mro"];
     };
     # Opinionated: disable channels
     channel.enable = false;

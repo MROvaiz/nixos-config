@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  # devenvironment Setup
+  # Sops password manager Setup
   imports = [inputs.sops-nix.nixosModules.sops];
   environment.systemPackages = with pkgs; [
     sops
