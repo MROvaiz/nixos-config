@@ -48,7 +48,7 @@
     # outputs.nixosModules.networking.zerotier
     # Service
     outputs.nixosModules.service.caddy
-    # outputs.nixosModules.service.docker
+    outputs.nixosModules.service.docker
     outputs.nixosModules.service.flatpak
     outputs.nixosModules.service.jellyfin
     # Terminal
