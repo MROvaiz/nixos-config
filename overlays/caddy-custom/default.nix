@@ -8,7 +8,7 @@
   testers,
   installShellFiles,
   externalPlugins ? [],
-  vendorHash ? "sha256-YNcQtjPGQ0XMSog+sWlH4lG/QdbdI0Lyh/fUGqQUFaY=",
+  vendorHash ? "sha256-1Api8bBZJ1/oYk4ZGIiwWCSraLzK9L+hsKXkFtk6iVM=",
 }: let
   attrsToModules = attrs:
     builtins.map ({
@@ -27,20 +27,20 @@
 in
   buildGoModule rec {
     pname = "caddy";
-    version = "2.7.5";
+    version = "2.8.4";
 
     dist = fetchFromGitHub {
       owner = "caddyserver";
       repo = "dist";
       rev = "v${version}";
-      hash = "sha256-aZ7hdAZJH1PvrX9GQLzLquzzZG3LZSKOvt7sWQhTiR8=";
+      hash = "sha256-O4s7PhSUTXoNEIi+zYASx8AgClMC5rs7se863G6w+l0=";
     };
 
     src = fetchFromGitHub {
       owner = "caddyserver";
       repo = "caddy";
       rev = "v${version}";
-      hash = "sha256-0IZZ7mkEzZI2Y8ed//m0tbBQZ0YcCXA0/b10ntNIXUk=";
+      hash = "sha256-CBfyqtWp3gYsYwaIxbfXO3AYaBiM7LutLC7uZgYXfkQ=";
     };
 
     inherit vendorHash;

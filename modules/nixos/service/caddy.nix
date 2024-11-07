@@ -15,7 +15,7 @@
           version = "v0.4.0";
         }
       ];
-      vendorHash = "sha256-UBn/jQIoi9yq3ZLd+LvDM7PUE0kqP0GKTU+oQIdHztw=";
+      vendorHash = "sha256-QBX4ljYFcK+/MQ9JDhsYBq639ZQMEuSDKVKKgVFnECE=";
     };
     virtualHosts = {
       # reverse_proxy is actual ip, which added in duckdns.
