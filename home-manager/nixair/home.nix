@@ -14,6 +14,7 @@
     # outputs.homeManagerModules.example
     # Apps
     outputs.homeManagerModules.apps.gimp
+    outputs.homeManagerModules.apps.libreoffice
     outputs.homeManagerModules.apps.obsidian
     outputs.homeManagerModules.apps.vscode
     # Desktop
