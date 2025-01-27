@@ -32,7 +32,7 @@
     # outputs.nixosModules.development.flutter
     # Hardware
     outputs.nixosModules.hardware.harddisk
-    outputs.nixosModules.hardware.printer
+    # outputs.nixosModules.hardware.printer
     outputs.nixosModules.hardware.mouse
     outputs.nixosModules.hardware.sound
     outputs.nixosModules.hardware.video
@@ -54,7 +54,7 @@
     # Terminal
     outputs.nixosModules.terminal.devenv
     outputs.nixosModules.terminal.git
-    # outputs.nixosModules.terminal.sops
+    outputs.nixosModules.terminal.sops
     outputs.nixosModules.terminal.utils
 
     # Or modules from other flakes (such as nixos-hardware):

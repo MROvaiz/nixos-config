@@ -1,184 +1,168 @@
 {pkgs, ...}: {
   mainBar = {
-    position = "top";
-    layer = "top";
-    height = 43;
-    margin-top = 0;
-    margin-bottom = 0;
-    margin-left = 0;
-    margin-right = 0;
-    modules-left = [
-      # "custom/launcher"
-      "hyprland/window"
-      #"custom/playerctl"
-      #"custom/playerlabel"
-    ];
-    modules-center = [
+    "modules-left" = [
+      "custom/icon-left-outer"
+      "group/group-power"
+      "custom/icon-split"
       "hyprland/workspaces"
-      # "cpu"
-      # "memory"
-      # "disk"
+      "custom/icon-right"
     ];
-    modules-right = [
-      "tray"
-      "pulseaudio"
-      "network"
+    "modules-center" = [
+      "custom/icon-left"
       "clock"
-      # "custom/randwall"
+      "custom/icon-right"
     ];
-    clock = {
-      format = "󱑍 {:%H:%M}";
-      tooltip = "true";
-      tooltip-format = ''
-        <big>{:%Y %B}</big>
-        <tt><small>{calendar}</small></tt>'';
-      format-alt = " {:%d/%m}";
-    };
-
-    "hyprland/window" = {
-      format = "{}";
-      max-length = 50;
+    "modules-right" = [
+      "custom/icon-left"
+      "network"
+      "custom/icon-split"
+      "memory"
+      "custom/icon-split"
+      "cpu"
+      "custom/icon-split"
+      # "battery"
+      "tray"
+      "custom/icon-split"
+      "pulseaudio"
+      "custom/icon-split"
+      "pulseaudio#microphone"
+      "custom/icon-right-outer"
+    ];
+    # "tray" = {
+    # };
+    "clock" = {
+      "interval" = 1;
+      "tooltip" = true;
+      "format" = "{:%H:%M:%S}";
+      "max-length" = 25;
+      "tooltip-format" = "{:%Y-%m-%d}";
     };
     "hyprland/workspaces" = {
-      active-only = false;
-      all-outputs = true;
-      disable-scroll = false;
-      on-scroll-up = "hyprctl dispatch workspace e-1";
-      on-scroll-down = "hyprctl dispatch workspace e+1";
-      format = "{icon}";
-      on-click = "activate";
-      format-icons = {
-        urgent = "";
-        active = "";
-        default = "";
-        sort-by-number = true;
+      "format" = "{icon} {windows}";
+      "window-rewrite-default" = "";
+      "window-rewrite" = {
+        "title<.*youtube.*>" = "";
+        "class<firefox>" = "";
+        "class<firefox> title<.*github.*>" = "";
+        "kitty" = "";
+        "code" = "󰨞";
+        "dolphin" = "";
       };
     };
-
-    "custom/playerctl" = {
-      format = "{icon}";
-      return-type = "json";
-      max-length = 64;
-      exec = ''
-        playerctl -a metadata --format '{"text": "{{artist}} - {{markup_escape(title)}}", "tooltip": "{{playerName}} : {{markup_escape(title)}}", "alt": "{{status}}", "class": "{{status}}"}' -F'';
-      on-click-middle = "playerctl play-pause";
-      on-click = "playerctl previous";
-      on-click-right = "playerctl next";
-      format-icons = {
-        Playing = "<span foreground='#6791eb'>󰓇 </span>";
-        Paused = "<span foreground='#cdd6f4'>󰓇 </span>";
+    "battery" = {
+      "bat" = "BAT0";
+      "interval" = 10;
+      "states" = {
+        "warning" = 30;
+        "critical" = 15;
       };
+      "format" = "{capacity}% {icon}";
+      "format-charging" = "{capacity}% 󰂄";
+      "format-icons" = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+      "max-length" = 25;
+    };
+    "pulseaudio" = {
+      "format" = "{icon} {volume}%";
+      "format-muted" = "󰝟 0%";
+      "format-icons" = {"default" = ["󰕿" "󰖀" "󰕾"];};
+      "on-click" = "pamixer -t";
+      "on-click-right" = "pavucontrol";
+    };
+    "pulseaudio#microphone" = {
+      "format" = "{format_source}";
+      "format-source" = "󰍬 {volume}%";
+      "format-source-muted" = "󰍭 0%";
+      "on-click" = "pamixer --default-source -t";
+      "on-click-right" = "pavucontrol";
+    };
+    "cpu" = {
+      "interval" = 1;
+      "format" = "CPU {icon0}{icon1}{icon2}{icon3}{icon4}";
+      "format-icons" = [
+        "<span color='#69ff94'>▁</span>"
+        "<span color='#2aa9ff'>▂</span>"
+        "<span color='#f8f8f2'>▃</span>"
+        "<span color='#f8f8f2'>▄</span>"
+        "<span color='#ffffa5'>▅</span>"
+        "<span color='#ffffa5'>▆</span>"
+        "<span color='#ff9977'>▇</span>"
+        "<span color='#dd532e'>█</span>"
+      ];
+    };
+    "memory" = {
+      "interval" = 30;
+      "format" = "{used:0.1f}GB/{total:0.1f}GB";
+    };
+    "network" = {
+      "format" = "{ifname}";
+      "format-wifi" = "{essid} ({signalStrength}%) ";
+      "format-ethernet" = "Connected 󰈀";
+      "format-disconnected" = "Disconnected";
+      "tooltip-format" = "{ifname} via {gwaddr} 󰈀";
+      "tooltip-format-wifi" = "{ipaddr} ";
+      "tooltip-format-ethernet" = "{ifname} ({ipaddr}) 󰈀";
+      "tooltip-format-disconnected" = "Disconnected";
+      "max-length" = 50;
     };
 
-    "custom/playerlabel" = {
-      format = "<span>{}</span>";
-      return-type = "json";
-      max-length = 48;
-      exec = ''
-        playerctl -a metadata --format '{"text": "{{artist}} - {{markup_escape(title)}}", "tooltip": "{{playerName}} : {{markup_escape(title)}}", "alt": "{{status}}", "class": "{{status}}"}' -F'';
-      on-click-middle = "playerctl play-pause";
-      on-click = "playerctl previous";
-      on-click-right = "playerctl next";
-      format-icons = {
-        Playing = "<span foreground='#6791eb'>󰓇 </span>";
-        Paused = "<span foreground='#cdd6f4'>󰓇 </span>";
+    "custom/logo" = {
+      "format" = "";
+    };
+
+    "group/group-power" = {
+      "orientation" = "inherit";
+      "drawer" = {
+        "transition-duration" = 500;
+        "children-class" = "not-power";
+        "transition-left-to-right" = true;
       };
+      "modules" = [
+        "custom/logo"
+        "custom/lock"
+        "custom/reboot"
+        "custom/power"
+      ];
     };
 
-    battery = {
-      states = {
-        good = 95;
-        warning = 30;
-        critical = 15;
-      };
-      format = "{icon}  {capacity}%";
-      format-charging = "{capacity}% ";
-      format-plugged = "{capacity}% ";
-      format-alt = "{icon} {time}";
-      # "format-good"= "", // An empty format will hide the module
-      # "format-full"= "";
-      format-icons = ["" "" "" "" ""];
+    "custom/icon-arch" = {
+      "exec" = "echo '󰣇'";
+      "interval" = 0;
+    };
+    "custom/icon-left" = {
+      "exec" = "echo '✦'";
+      "interval" = 0;
+    };
+    "custom/icon-left-outer" = {
+      "exec" = "echo '✦'";
+      "interval" = 0;
+    };
+    "custom/icon-split" = {
+      "exec" = "echo '|'";
+      "interval" = 0;
+    };
+    "custom/icon-right" = {
+      "exec" = "echo '✦'";
+      "interval" = 0;
+    };
+    "custom/icon-right-outer" = {
+      "exec" = "echo '✦'";
+      "interval" = 0;
     };
 
-    memory = {
-      format = "󰍛 {}%";
-      format-alt = "󰍛 {used}/{total} GiB";
-      interval = 5;
+    "custom/lock" = {
+      "format" = "󰍁";
+      "tooltip" = false;
+      "on-click" = "hyprlock";
     };
-
-    cpu = {
-      format = "󰻠 {usage}%";
-      format-alt = "󰻠 {avg_frequency} GHz";
-      interval = 5;
+    "custom/reboot" = {
+      "format" = "󰜉";
+      "tooltip" = false;
+      "on-click" = "reboot";
     };
-
-    disk = {
-      format = "󰋊 {}%";
-      format-alt = "󰋊 {used}/{total} GiB";
-      interval = 5;
-      path = "/";
-    };
-
-    network = {
-      interface = "wlo1";
-      format = "{}";
-      format-wifi = "󰤨";
-      format-ethernet = "󰈀 {ifname}: Aesthetic";
-      format-linked = "󰈀 {ifname} (No IP)";
-      format-disconnected = "󰤭";
-      format-alt = "󰈀 {ifname}: {ipaddr}/{cidr}";
-      tooltip-format = "{essid}";
-      on-click-right = "kitty nmtui";
-    };
-
-    tray = {
-      icon-size = 16;
-      spacing = 5;
-    };
-
-    backlight = {
-      # "device"= "acpi_video1";
-      format = "{icon} {percent}%";
-      format-icons = ["" "" "" "" "" "" "" "" ""];
-      #	"on-scroll-up"=;
-      #	"on-scroll-down"=;
-    };
-
-    pulseaudio = {
-      format = "{icon} {volume}%";
-      format-muted = "󰝟";
-      format-icons = {default = ["󰕿" "󰖀" "󱄠"];};
-      on-click = "pamixer -t";
-      on-click-right = "pavucontrol";
-      on-scroll-up = "pamixer -i 5";
-      on-scroll-down = "pamixer -d 5";
-      scroll-step = 5;
-    };
-    "custom/randwall" = {
-      format = "󰏘";
-      on-click = "bash $HOME/.config/hypr/randwall.sh";
-      on-click-right = "bash $HOME/.config/hypr/wall.sh";
-    };
-    "custom/launcher" = {
-      format = "";
-      on-click = "rofi -show drun";
-      tooltip = "false";
-    };
-
-    "custom/wf-recorder" = {
-      format = "{}";
-      interval = "once";
-      exec = "echo ''";
-      tooltip = "false";
-      exec-if = "pgrep 'wf-recorder'";
-      on-click = "exec ./scripts/wlrecord.sh";
-      signal = 8;
-    };
-
-    "custom/hyprpicker" = {
-      format = "󰈋";
-      on-click = "hyprpicker -a -f hex";
-      on-click-right = "hyprpicker -a -f rgb";
+    "custom/power" = {
+      "format" = "";
+      "tooltip" = false;
+      "on-click" = "shutdown now";
     };
   };
 }
