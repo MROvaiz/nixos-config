@@ -20,6 +20,8 @@
       "custom/icon-split"
       "cpu"
       "custom/icon-split"
+      "temperature"
+      "custom/icon-split"
       # "battery"
       "tray"
       "custom/icon-split"
@@ -77,26 +79,23 @@
     };
     "cpu" = {
       "interval" = 1;
-      "format" = "CPU {icon0}{icon1}{icon2}{icon3}{icon4}";
-      "format-icons" = [
-        "<span color='#69ff94'>▁</span>"
-        "<span color='#2aa9ff'>▂</span>"
-        "<span color='#f8f8f2'>▃</span>"
-        "<span color='#f8f8f2'>▄</span>"
-        "<span color='#ffffa5'>▅</span>"
-        "<span color='#ffffa5'>▆</span>"
-        "<span color='#ff9977'>▇</span>"
-        "<span color='#dd532e'>█</span>"
-      ];
+      "format" = " {usage}%";
     };
     "memory" = {
-      "interval" = 30;
-      "format" = "{used:0.1f}GB/{total:0.1f}GB";
+      "interval" = 1;
+      "format" = " {used:0.1f}GB";
+    };
+    "temperature" = {
+      "interval" = 1;
+      "thermal-zone" = 2;
+      "critical-threshold" = 80;
+      "format-critical" = "{temperatureC}°C ";
+      "format" = "{temperatureC}°C ";
     };
     "network" = {
       "format" = "{ifname}";
       "format-wifi" = "{essid} ({signalStrength}%) ";
-      "format-ethernet" = "Connected 󰈀";
+      "format-ethernet" = "{ifname} 󰈀";
       "format-disconnected" = "Disconnected";
       "tooltip-format" = "{ifname} via {gwaddr} 󰈀";
       "tooltip-format-wifi" = "{ipaddr} ";

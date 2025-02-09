@@ -65,7 +65,7 @@ with colorscheme.colors; ''
     border-radius: 0px 0px 12px 0;
   }
 
-  #cpu {
+  #cpu, #temperature {
     background-color: #121B35;
     color: #3a688c;
     font-size: 12px;

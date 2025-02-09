@@ -72,7 +72,7 @@
       };
       bind = [
         # Apps binds
-        "$MOD, Q, exec, kitty"
+        "$MOD, Q, exec, ghostty"
         "$MOD, C, killactive"
         "$MOD, M, exit"
         "$MOD, L, exec, hyprlock"

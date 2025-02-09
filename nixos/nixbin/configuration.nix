@@ -51,7 +51,9 @@
     outputs.nixosModules.service.docker
     outputs.nixosModules.service.flatpak
     outputs.nixosModules.service.jellyfin
+    outputs.nixosModules.service.ollama
     # Terminal
+    outputs.nixosModules.terminal.android
     outputs.nixosModules.terminal.devenv
     outputs.nixosModules.terminal.git
     outputs.nixosModules.terminal.sops
@@ -177,6 +179,7 @@
         "wheel"
         "fuse"
         "libvirtd"
+        "adbusers"
       ];
     };
   };

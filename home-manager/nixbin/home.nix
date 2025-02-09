@@ -14,6 +14,7 @@
     # outputs.homeManagerModules.example
     # Apps
     outputs.homeManagerModules.apps.discord
+    outputs.homeManagerModules.apps.ghostty
     outputs.homeManagerModules.apps.gimp
     outputs.homeManagerModules.apps.kitty
     outputs.homeManagerModules.apps.kodi

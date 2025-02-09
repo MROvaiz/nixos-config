@@ -1,4 +1,5 @@
 {
+  android = import ./android.nix;
   devenv = import ./devenv.nix;
   git = import ./git.nix;
   locale = import ./locale.nix;

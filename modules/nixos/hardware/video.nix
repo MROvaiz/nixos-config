@@ -13,16 +13,17 @@
       extraPackages32 = with pkgs.pkgsi686Linux; [
         vaapiVdpau
         libvdpau-va-gl
-        rocmPackages.clr.icd # AMD required pkg
+        # rocmPackages.clr.icd # AMD required pkg
       ];
     };
   };
   # GPU Settings RX 7800XT
+  boot.kernelModules = ["amdgpu"];
   environment.systemPackages = with pkgs; [
     rocmPackages.clr.icd
   ];
   systemd.tmpfiles.rules = [
     "L+    /opt/rocm   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
-  nixpkgs.config.rocmSupport = true;
+  # nixpkgs.config.rocmSupport = true;
 }

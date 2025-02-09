@@ -1,6 +1,7 @@
 {
   discord = import ./discord.nix;
   filezilla = import ./filezilla.nix;
+  ghostty = import ./ghostty.nix;
   gimp = import ./gimp.nix;
   insomnia = import ./insomnia.nix;
   kitty = import ./kitty.nix;
