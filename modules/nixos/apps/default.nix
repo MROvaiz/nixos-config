@@ -3,6 +3,7 @@
   droidcam = import ./droidcam.nix;
   firefox = import ./firefox.nix;
   lutris = import ./lutris.nix;
+  obs = import ./obs.nix;
   openrgb = import ./openrgb.nix;
   steam = import ./steam.nix;
   thunar = import ./thunar.nix;

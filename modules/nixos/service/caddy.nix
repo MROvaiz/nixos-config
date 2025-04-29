@@ -19,19 +19,19 @@
     # };
     package = pkgs.caddy.withPlugins {
       plugins = ["github.com/caddy-dns/duckdns@v0.4.0"];
-      hash = "sha256-ouSd+gipEPMgPo9vNKyYtFxFVIPjxxsCTLV5jNvPR84=";
+      hash = "sha256-9vUR5sL5nkTgzSxYEv2KatrAidmTQMGyHcrrHv6b+cE=";
     };
-    virtualHosts = {
-      # reverse_proxy is actual ip, which added in duckdns.
-      # token is static token added.
-      "jellyfin.mrovaiz.duckdns.org".extraConfig = ''
-        reverse_proxy localhost:8096
-        tls {
-          dns duckdns {file.${config.sops.secrets."duckdns/mrovaiz".path}} {
-            override_domain mrovaiz.duckdns.org
-          }
-        }
-      '';
-    };
+    # virtualHosts = {
+    #   # reverse_proxy is actual ip, which added in duckdns.
+    #   # token is static token added.
+    #   "jellyfin.mrovaiz.duckdns.org".extraConfig = ''
+    #     reverse_proxy localhost:8096
+    #     tls {
+    #       dns duckdns {file.${config.sops.secrets."duckdns/mrovaiz".path}} {
+    #         override_domain mrovaiz.duckdns.org
+    #       }
+    #     }
+    #   '';
+    # };
   };
 }

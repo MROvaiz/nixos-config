@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   services.jellyfin = {
     enable = true;
     openFirewall = true;
@@ -8,4 +13,14 @@
     jellyfin-web
     jellyfin-ffmpeg
   ];
+  services.caddy.virtualHosts = lib.mkIf (config.services.caddy.enable) {
+    "jellyfin.mrovaiz.duckdns.org".extraConfig = ''
+      reverse_proxy localhost:8096
+      tls {
+        dns duckdns {file.${config.sops.secrets."duckdns/mrovaiz".path}} {
+          override_domain mrovaiz.duckdns.org
+        }
+      }
+    '';
+  };
 }

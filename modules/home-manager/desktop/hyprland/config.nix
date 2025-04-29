@@ -142,6 +142,8 @@
         "float,class:^(steam)$,title:^(Friends List)$"
         "size 20% 75%,class:^(steam)$,title:^(Friends List)$"
         "center,class:^(steam)$,title:^(Friends List)$"
+        "float,class:^(steam)$,title:^(Add Non-Steam Game)$"
+        "center,class:^(steam)$,title:^(Add Non-Steam Game)$"
 
         # Virt Manager Window rules
         "float,class:^(virt-manager)$,title:^(Virtual Machine Manager)$"
@@ -153,9 +155,11 @@
         "nomaxsize,class:^(dxwsetup.exe)$"
         "float,class:^(epicgameslauncher.exe)$,title:^(Epic Games Launcher)$"
 
-        # Kitty Window rules
-        "opacity 0.8 0.8,class:^(kitty)$"
-        "animation popin,class:^(kitty)$,title:^(update-sys)$"
+        # Opacities
+        "opacity 0.8 0.8,class:^(com.mitchellh.ghostty)$"
+        "opacity 0.9 0.9,class:^(Code)$"
+        "opacity 0.99 0.99,class:^(firefox)$"
+        "opacity 0.9 0.9,class:^(discord)$"
 
         # Thunar Window rules
         "animation popin,class:^(thunar)$"

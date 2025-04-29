@@ -47,6 +47,7 @@
         "class<firefox>" = "";
         "class<firefox> title<.*github.*>" = "";
         "kitty" = "";
+        "ghostty" = "";
         "code" = "󰨞";
         "dolphin" = "";
       };

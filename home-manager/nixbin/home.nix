@@ -18,7 +18,6 @@
     outputs.homeManagerModules.apps.gimp
     outputs.homeManagerModules.apps.kitty
     outputs.homeManagerModules.apps.kodi
-    outputs.homeManagerModules.apps.obs
     outputs.homeManagerModules.apps.obsidian
     outputs.homeManagerModules.apps.vscode
     # Desktop
