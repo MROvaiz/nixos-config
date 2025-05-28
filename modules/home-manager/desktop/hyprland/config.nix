@@ -126,13 +126,6 @@
         "$MOD, mouse:272, movewindow"
         "$MOD, mouse:273, resizewindow"
       ];
-      # Example windowrule v1
-      windowrule = [
-        "float,^(pavucontrol)$"
-        "float,^(blueman-manager)$"
-        "float,^(lutris)$"
-        "float,^(nm-connection-editor)$"
-      ];
       # Example windowrule v2
       windowrulev2 = [
         # Steam Window rules

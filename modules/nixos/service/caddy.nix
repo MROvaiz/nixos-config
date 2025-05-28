@@ -18,8 +18,8 @@
     #   vendorHash = "sha256-QBX4ljYFcK+/MQ9JDhsYBq639ZQMEuSDKVKKgVFnECE=";
     # };
     package = pkgs.caddy.withPlugins {
-      plugins = ["github.com/caddy-dns/duckdns@v0.4.0"];
-      hash = "sha256-9vUR5sL5nkTgzSxYEv2KatrAidmTQMGyHcrrHv6b+cE=";
+      plugins = ["github.com/caddy-dns/duckdns@v0.5.0"];
+      hash = "sha256-bRH4mIK1d5m1LCxDXNPyN/8jGvQA6nsvTThe6ApXIqM=";
     };
     # virtualHosts = {
     #   # reverse_proxy is actual ip, which added in duckdns.

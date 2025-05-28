@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   virtualisation.docker = {
-    enable = true;
-    liveRestore = false;
+    enable = false;
+    # liveRestore = false;
     rootless = {
       enable = true;
       setSocketVariable = true;

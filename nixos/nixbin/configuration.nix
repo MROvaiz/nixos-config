@@ -43,13 +43,14 @@
     outputs.nixosModules.monitoring.vnstat
     # Networking
     outputs.nixosModules.networking.bluetooth
+    outputs.nixosModules.networking.internet
     outputs.nixosModules.networking.nfs
     outputs.nixosModules.networking.tailscale
     outputs.nixosModules.networking.wireguard
     # outputs.nixosModules.networking.zerotier
     # Service
     outputs.nixosModules.service.caddy
-    outputs.nixosModules.service.docker
+    # outputs.nixosModules.service.docker
     outputs.nixosModules.service.flatpak
     outputs.nixosModules.service.jellyfin
     # outputs.nixosModules.service.ollama
@@ -148,6 +149,7 @@
   # boot.loader.systemd-boot.enable = true;
   # Implements Grub for EFI machines.
   boot.loader = {
+    timeout = 1;
     efi = {
       # canTouchEfiVariables = true;
       efiSysMountPoint = "/boot";
