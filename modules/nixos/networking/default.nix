@@ -1,6 +1,7 @@
 {
   bluetooth = import ./bluetooth.nix;
   internet = import ./internet.nix;
+  netbird = import ./netbird.nix;
   nfs = import ./nfs.nix;
   openvpn = import ./openvpn.nix;
   samba = import ./samba.nix; # draft

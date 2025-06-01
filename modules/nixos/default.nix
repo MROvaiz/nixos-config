@@ -16,6 +16,9 @@
   # Development
   development = import ./development;
 
+  # global
+  global = import ./global;
+
   # Hardware
   hardware = import ./hardware;
 
@@ -30,4 +33,7 @@
 
   # Terminal
   terminal = import ./terminal;
+
+  # Users
+  users = import ./users;
 }

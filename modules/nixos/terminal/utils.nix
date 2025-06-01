@@ -13,7 +13,8 @@
     unrar
     magic-wormhole
     ani-cli
-    inputs.alejandra.defaultPackage.${system}
+    # inputs.alejandra.defaultPackage.${system}
+    alejandra # Nix formatter
 
     # screenshot
     inputs.hyprwm-contrib.packages.${system}.grimblast # Screenshots.

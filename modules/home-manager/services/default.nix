@@ -1,3 +1,3 @@
 {
-  rclone = import ./rclone.nix;
+  rclone = import ./rclone.nix; # Disabled
 }

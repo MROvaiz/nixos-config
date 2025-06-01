@@ -1,7 +1,10 @@
 # .sops.yaml
 
 keys:
-  - &primary age1rpsservz7smy9snk73twwrep7resucln5jqsa4u4q6q9wuuajqpsgt7jmf
+  - &users:
+    - &primary age1rpsservz7smy9snk73twwrep7resucln5jqsa4u4q6q9wuuajqpsgt7jmf
+  - &hosts:
+    - &nixbin age172tyuscdvvl80aqp5url0wcfvam36w829lt6w5eapf2zmmy4qqpq57rz3y
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:

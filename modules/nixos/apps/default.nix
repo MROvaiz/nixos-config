@@ -10,4 +10,5 @@
   transmission = import ./transmission.nix;
   virtualisation = import ./virtualisation.nix;
   vlc = import ./vlc.nix;
+  zoom = import ./zoom.nix;
 }
