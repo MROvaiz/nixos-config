@@ -12,13 +12,6 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
-    # Apps
-    outputs.homeManagerModules.apps.gimp
-    outputs.homeManagerModules.apps.obsidian
-    outputs.homeManagerModules.apps.vscode
-    outputs.homeManagerModules.apps.filezilla
-    outputs.homeManagerModules.apps.insomnia
-    outputs.homeManagerModules.apps.postman
     # Desktop
     # TODO: gnome config?
 

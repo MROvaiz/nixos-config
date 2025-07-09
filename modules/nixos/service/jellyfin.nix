@@ -14,11 +14,19 @@
     jellyfin-ffmpeg
   ];
   services.caddy.virtualHosts = lib.mkIf (config.services.caddy.enable) {
-    "jellyfin.mrovaiz.duckdns.org".extraConfig = ''
+    # "jellyfin.mrovaiz.duckdns.org".extraConfig = ''
+    #   reverse_proxy localhost:8096
+    #   tls {
+    #     dns duckdns {file.${config.sops.secrets."duckdns/mrovaiz".path}} {
+    #       override_domain mrovaiz.duckdns.org
+    #     }
+    #   }
+    # '';
+    "jellyfin.${config.networking.hostName}.duckdns.org".extraConfig = ''
       reverse_proxy localhost:8096
       tls {
         dns duckdns {file.${config.sops.secrets."duckdns/mrovaiz".path}} {
-          override_domain mrovaiz.duckdns.org
+          override_domain ${config.networking.hostName}.duckdns.org
         }
       }
     '';

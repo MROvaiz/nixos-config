@@ -32,7 +32,7 @@
     outputs.nixosModules.desktop.sddm
     # Development
     # outputs.nixosModules.development.flutter
-    # Development
+    # Global
     outputs.nixosModules.global
     # Hardware
     outputs.nixosModules.hardware.harddisk
@@ -55,7 +55,7 @@
     # Service
     outputs.nixosModules.service.caddy
     # outputs.nixosModules.service.docker
-    outputs.nixosModules.service.flatpak
+    # outputs.nixosModules.service.flatpak
     outputs.nixosModules.service.jellyfin
     # outputs.nixosModules.service.ollama
     # Terminal

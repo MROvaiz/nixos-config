@@ -20,7 +20,7 @@
     # Desktop
     outputs.nixosModules.desktop.gdm
     outputs.nixosModules.desktop.gnome
-    # Development
+    # Global
     outputs.nixosModules.global
     # Hardware
     outputs.nixosModules.hardware.mouse
@@ -40,7 +40,6 @@
     # Terminal
     outputs.nixosModules.terminal.devenv
     outputs.nixosModules.terminal.git
-    outputs.nixosModules.terminal.locale
     # Users
     outputs.nixosModules.users.mro
 

@@ -49,8 +49,7 @@
     hyprwm-contrib.url = "github:hyprwm/contrib";
     systems.url = "github:nix-systems/default-linux";
     nix-gaming = {
-      # url = "github:fufexan/nix-gaming";
-      url = "github:misterio77/nix-gaming";
+      url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -116,6 +115,24 @@
           # }
         ];
       };
+      nixserve = lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main nixos configuration file <
+          ./nixos/nixserve/configuration.nix
+
+          # Import home-manager's NixOS module
+          # home-manager.nixosModules.home-manager
+          # {
+          #   home-manager = {
+          #     # useGlobalPkgs = true;
+          #     useUserPackages = true;
+          #     extraSpecialArgs = {inherit inputs outputs;};
+          #     users.mro = import ./home-manager/nixserve/home.nix;
+          #   };
+          # }
+        ];
+      };
       nixwork = lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
@@ -123,15 +140,15 @@
           ./nixos/nixwork/configuration.nix
 
           # Import home-manager's NixOS module
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              # useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {inherit inputs outputs;};
-              users.mro = import ./home-manager/nixwork/home.nix;
-            };
-          }
+          # home-manager.nixosModules.home-manager
+          # {
+          #   home-manager = {
+          #     # useGlobalPkgs = true;
+          #     useUserPackages = true;
+          #     extraSpecialArgs = {inherit inputs outputs;};
+          #     users.mro = import ./home-manager/nixwork/home.nix;
+          #   };
+          # }
         ];
       };
       nixair = lib.nixosSystem {
