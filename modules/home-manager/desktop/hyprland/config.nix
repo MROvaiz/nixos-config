@@ -11,6 +11,7 @@
   ];
   wayland.windowManager.hyprland = {
     enable = true;
+    xwayland.enable = true;
     settings = {
       "$MOD" = "SUPER";
       "$MODSHIFT" = "$MOD SHIFT";
@@ -70,6 +71,9 @@
       gestures = {
         workspace_swipe = false;
       };
+      debug = {
+        full_cm_proto = true;
+      };
       bind = [
         # Apps binds
         "$MOD, Q, exec, ghostty"
@@ -78,6 +82,7 @@
         "$MOD, L, exec, hyprlock"
         "$MOD, E, exec, thunar"
         "$MOD, V, togglefloating"
+        "$MOD, F, fullscreen"
         "$MOD, SPACE, exec, rofi -show drun"
         "$MOD, P, pseudo"
         "$MOD, J, togglesplit"

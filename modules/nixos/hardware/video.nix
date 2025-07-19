@@ -1,7 +1,14 @@
 {pkgs, ...}: {
   # Video Drivers
   hardware = {
-    amdgpu.opencl.enable = true;
+    amdgpu = {
+      opencl.enable = true;
+      initrd.enable = true;
+      amdvlk = {
+        enable = true;
+        support32Bit.enable = true;
+      };
+    };
     graphics = {
       enable = true;
       enable32Bit = true;
