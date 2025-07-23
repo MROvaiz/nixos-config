@@ -4,4 +4,5 @@
   flatpak = import ./flatpak.nix;
   jellyfin = import ./jellyfin.nix;
   ollama = import ./ollama.nix;
+  sunshine = import ./sunshine.nix;
 }

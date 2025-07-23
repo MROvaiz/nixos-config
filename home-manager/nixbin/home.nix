@@ -24,6 +24,7 @@
     outputs.homeManagerModules.desktop.hyprland
     outputs.homeManagerModules.desktop.hyprlock
     outputs.homeManagerModules.desktop.rofi
+    outputs.homeManagerModules.desktop.swaync
     outputs.homeManagerModules.desktop.themes
     outputs.homeManagerModules.desktop.waybar
     # Services

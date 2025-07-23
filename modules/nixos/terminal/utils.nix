@@ -11,19 +11,12 @@
     zip
     unzip
     unrar
+    p7zip
     magic-wormhole
     ani-cli
-    # inputs.alejandra.defaultPackage.${system}
     alejandra # Nix formatter
 
-    # screenshot
-    inputs.hyprwm-contrib.packages.${system}.grimblast # Screenshots.
-    grim
-    slurp
-    swappy
-
     # notifications
-    dunst
     libnotify
   ];
 }

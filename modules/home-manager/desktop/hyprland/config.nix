@@ -21,10 +21,11 @@
         "DP-1,2560x1440@144,0x0,1"
       ];
       exec-once = [
-        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        # "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        # "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "blueman-applet & nm-applet --indicator"
         "waybar"
+        "swaync"
       ];
       xwayland = {force_zero_scaling = true;};
       input = {

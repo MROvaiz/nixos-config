@@ -2,6 +2,7 @@
   config,
   pkgs,
   self,
+  inputs,
   ...
 }: {
   home.packages = with pkgs; [
@@ -12,6 +13,12 @@
     hyprpicker
     wlsunset
     tree
+
+    # screenshot
+    inputs.hyprwm-contrib.packages.${system}.grimblast # Screenshots.
+    grim
+    slurp
+    swappy
   ];
 
   # make stuff work on wayland

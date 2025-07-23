@@ -2,7 +2,7 @@
   programs = {
     # Enable Steam Game
     # Gamescope session inside game.
-    # gamescope -W 2560 -H 1440 --framerate-limit 60 -r 60 --mangoapp -F fsr -f -b --force-grab-cursor -- gamemoderun %command%
+    # LD_PRELOAD="" gamescope -W 2560 -H 1440 -r 60 --mangoapp -f -b --force-grab-cursor -- %command%
     # dont use -F fsr, if its crashing on launch.
     # dont use -e, game will be hidden.
     steam = {
@@ -64,7 +64,6 @@
     fceux
 
     # PS
-    ppsspp
     pcsx2
 
     # Vulkan tools
@@ -78,6 +77,8 @@
     (retroarch.withCores (cores:
       with cores; [
         mesen
+        ppsspp
+        desmume
       ]))
   ];
 }

@@ -58,6 +58,7 @@
     # outputs.nixosModules.service.flatpak
     outputs.nixosModules.service.jellyfin
     # outputs.nixosModules.service.ollama
+    outputs.nixosModules.service.sunshine
     # Terminal
     outputs.nixosModules.terminal.android
     outputs.nixosModules.terminal.devenv
