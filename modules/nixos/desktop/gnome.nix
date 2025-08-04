@@ -4,5 +4,5 @@
   ...
 }: {
   # Gnome lock
-  services.xserver.desktopManager.gnome.enable = true;
+  services.desktopManager.gnome.enable = true;
 }
