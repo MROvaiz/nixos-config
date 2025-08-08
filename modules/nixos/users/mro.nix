@@ -18,6 +18,8 @@
         "wheel"
         "libvirtd"
         "adbusers"
+        "scanner"
+        "lp"
       ];
     };
   };

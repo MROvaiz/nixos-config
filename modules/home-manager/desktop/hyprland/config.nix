@@ -135,14 +135,19 @@
       # Example windowrule v2
       windowrulev2 = [
         # Steam Window rules
-        "float,class:^(steam)$,title:^(Steam)$"
-        "size 75% 75%,class:^(steam)$,title:^(Steam)$"
-        "center,class:^(steam)$,title:^(Steam)$"
-        "float,class:^(steam)$,title:^(Friends List)$"
-        "size 20% 75%,class:^(steam)$,title:^(Friends List)$"
-        "center,class:^(steam)$,title:^(Friends List)$"
-        "float,class:^(steam)$,title:^(Add Non-Steam Game)$"
-        "center,class:^(steam)$,title:^(Add Non-Steam Game)$"
+        "float,class:^([Ss]team)$,title:^(Steam)$"
+        "size 75% 75%,class:^([Ss]team)$,title:^(Steam)$"
+        "center,class:^([Ss]team)$,title:^(Steam)$"
+        "float,class:^([Ss]team)$,title:^(Friends List)$"
+        "size 20% 75%,class:^([Ss]team)$,title:^(Friends List)$"
+        "center,class:^([Ss]team)$,title:^(Friends List)$"
+        "float,class:^([Ss]team)$,title:^(Add Non-Steam Game)$"
+        "center,class:^([Ss]team)$,title:^(Add Non-Steam Game)$"
+        "fullscreen,class:^([Ss]team)$,title:^(Steam Big Picture Mode)$"
+        "center,class:^([Ss]team)$,title:^(Steam Big Picture Mode)$"
+
+        "fullscreen,class:^(com.libretro.RetroArch)$"
+        "center,class:^(com.libretro.RetroArch)$"
 
         # Virt Manager Window rules
         "float,class:^(virt-manager)$,title:^(Virtual Machine Manager)$"

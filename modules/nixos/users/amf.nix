@@ -16,6 +16,8 @@
       extraGroups = [
         "wheel"
         "libvirtd"
+        "scanner"
+        "lp"
       ];
     };
   };

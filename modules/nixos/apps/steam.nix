@@ -2,7 +2,7 @@
   programs = {
     # Enable Steam Game
     # Gamescope session inside game.
-    # LD_PRELOAD="" gamescope -W 2560 -H 1440 -r 60 --mangoapp -f -b --force-grab-cursor -- %command%
+    # gamemoderun gamescope -W 2560 -H 1440 -r 60 --mangoapp -f -b --force-grab-cursor -- %command%
     # dont use -F fsr, if its crashing on launch.
     # dont use -e, game will be hidden.
     steam = {
@@ -58,10 +58,6 @@
 
     # Roms Manager
     steam-rom-manager
-
-    # NES
-    mesen
-    fceux
 
     # PS
     pcsx2

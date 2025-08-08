@@ -15,6 +15,7 @@
     magic-wormhole
     ani-cli
     alejandra # Nix formatter
+    nix-tree
 
     # notifications
     libnotify

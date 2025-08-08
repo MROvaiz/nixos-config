@@ -1,8 +1,11 @@
-{...}: {
-  services.sunshine = {
-    enable = true;
-    autoStart = true;
-    capSysAdmin = true; # only needed for Wayland -- omit this when using with Xorg
-    openFirewall = true;
+{pkgs, ...}: {
+  services = {
+    sunshine = {
+      enable = true;
+      autoStart = false;
+      capSysAdmin = true;
+      openFirewall = true;
+      package = pkgs.sunshine;
+    };
   };
 }

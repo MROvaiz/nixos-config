@@ -19,6 +19,7 @@
     # outputs.nixosModules.apps.droidcam
     outputs.nixosModules.apps.firefox
     # outputs.nixosModules.apps.lutris
+    outputs.nixosModules.apps.nh
     outputs.nixosModules.apps.obs
     outputs.nixosModules.apps.openrgb
     outputs.nixosModules.apps.steam
@@ -58,7 +59,7 @@
     # outputs.nixosModules.service.flatpak
     outputs.nixosModules.service.jellyfin
     # outputs.nixosModules.service.ollama
-    outputs.nixosModules.service.sunshine
+    # outputs.nixosModules.service.sunshine
     # Terminal
     outputs.nixosModules.terminal.android
     outputs.nixosModules.terminal.devenv

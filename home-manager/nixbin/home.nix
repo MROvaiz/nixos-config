@@ -29,6 +29,7 @@
     outputs.homeManagerModules.desktop.waybar
     # Services
     # outputs.homeManagerModules.services.rclone # Disable
+    # outputs.homeManagerModules.services.sunshine
     # Settings
     outputs.homeManagerModules.settings.sound
     outputs.homeManagerModules.settings.virtmanager

@@ -41,12 +41,13 @@ in {
       # Opinionated: disable global registry
       flake-registry = "";
     };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      # Keep the last 3 generations
-      options = "--delete-older-than 10d";
-    };
+    # Trying nh clean module.
+    # gc = {
+    #   automatic = true;
+    #   dates = "weekly";
+    #   # Keep the last 3 generations
+    #   options = "--delete-older-than 10d";
+    # };
 
     # Add each flake input as a registry and nix_path
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
