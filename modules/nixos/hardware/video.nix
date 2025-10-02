@@ -28,9 +28,11 @@
   boot.kernelModules = ["amdgpu"];
   environment.systemPackages = with pkgs; [
     rocmPackages.clr.icd
+    gpu-screen-recorder-gtk # GUI app
   ];
   systemd.tmpfiles.rules = [
     "L+    /opt/rocm   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
   # nixpkgs.config.rocmSupport = true;
+  programs.gpu-screen-recorder.enable = true;
 }

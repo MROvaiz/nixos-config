@@ -186,8 +186,8 @@
         "float,class:^(.blueman-manager-wrapped)$"
         "size 25% 25%,class:^(.blueman-manager-wrapped)$"
         "float,class:^(openrgb)$,title:^(OpenRGB)$"
-        "float,class:^(.org.pulseaudio.pavucontrol)$"
-        "size 25% 25%,class:^(.org.pulseaudio.pavucontrol)$"
+        "float,class:^(org.pulseaudio.pavucontrol)$"
+        "size 28% 28%,class:^(org.pulseaudio.pavucontrol)$"
         "float,title:^(Virtual Machine Manager)$"
         "size 25% 25%,title:^(Virtual Machine Manager)$"
       ];

@@ -41,6 +41,10 @@ in {
       # Opinionated: disable global registry
       flake-registry = "";
     };
+    optimise = {
+      automatic = true;
+      dates = ["03:45"];
+    };
     # Trying nh clean module.
     # gc = {
     #   automatic = true;
