@@ -69,9 +69,9 @@
       # master = {
       #   new_is_master = true;
       # };
-      gestures = {
-        workspace_swipe = false;
-      };
+      # gestures = {
+      #   workspace_swipe = false;
+      # };
       debug = {
         full_cm_proto = true;
       };

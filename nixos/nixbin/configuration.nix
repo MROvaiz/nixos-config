@@ -41,6 +41,7 @@
     outputs.nixosModules.hardware.mouse
     outputs.nixosModules.hardware.sound
     outputs.nixosModules.hardware.video
+    outputs.nixosModules.hardware.vr
     # Monitoring
     outputs.nixosModules.monitoring.btop
     outputs.nixosModules.monitoring.iperf3
@@ -48,7 +49,7 @@
     # Networking
     outputs.nixosModules.networking.bluetooth
     outputs.nixosModules.networking.internet
-    # outputs.nixosModules.networking.netbird
+    outputs.nixosModules.networking.netbird
     outputs.nixosModules.networking.nfs
     outputs.nixosModules.networking.tailscale
     outputs.nixosModules.networking.wireguard

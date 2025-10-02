@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    # package = pkgs.rofi-wayland;
     plugins = with pkgs; [
     ];
     # Get Themes from https://github.com/adi1090x/rofi
