@@ -16,10 +16,27 @@
       "$MOD" = "SUPER";
       "$MODSHIFT" = "$MOD SHIFT";
       "$MODALT" = "$MOD ALT";
-      monitor = [
-        ",preferred,auto,auto"
-        "DP-1,2560x1440@144,0x0,1"
-      ];
+      # monitor = [
+      #   ",preferred,auto,auto"
+      #   "DP-1,2560x1440@144,0x0,1"
+      # ];
+      monitorv2 = {
+        "output" = "DP-1";
+        "mode" = "2560x1440@144";
+        "position" = "0x0";
+        "scale" = 1;
+        "bitdepth" = 10;
+        "cm" = "hdr";
+        "sdrbrightness" = 1.0;
+        "sdrsaturation" = 1.0;
+        "supports_wide_color" = 1;
+        "supports_hdr" = 1;
+        "sdr_min_luminance" = 0.005;
+        "sdr_max_luminance" = 200;
+        "min_luminance" = 0;
+        "max_luminance" = 1000;
+        "max_avg_luminance" = 200;
+      };
       exec-once = [
         # "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         # "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"

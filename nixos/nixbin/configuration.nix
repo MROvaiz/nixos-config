@@ -49,7 +49,7 @@
     # Networking
     outputs.nixosModules.networking.bluetooth
     outputs.nixosModules.networking.internet
-    outputs.nixosModules.networking.netbird
+    # outputs.nixosModules.networking.netbird
     outputs.nixosModules.networking.nfs
     outputs.nixosModules.networking.tailscale
     outputs.nixosModules.networking.wireguard
