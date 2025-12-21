@@ -150,63 +150,75 @@
         "$MOD, mouse:273, resizewindow"
       ];
       # Example windowrule v2
-      windowrulev2 = [
+      windowrule = [
+        ## New Rules
+        ## Steam Rules
+        "match:class steam, float on"
+        "match:class steam, match:title Steam, center on"
+        "match:class steam, match:title Steam Big Picture Mode, fullscreen on"
+
+        ## Utilities
+        "match:class org.pulseaudio.pavucontrol, float on, center on, size 560 455"
+        "match:class .blueman-manager-wrapped, float on, center on, size 530 410"
+        "match:title OpenRGB, float on, center on, size 920 410"
+        "match:class transmission-gtk, float on, center on, size 400 600"
+
         # Steam Window rules
-        "float,class:^([Ss]team)$,title:^(Steam)$"
-        "size 75% 75%,class:^([Ss]team)$,title:^(Steam)$"
-        "center,class:^([Ss]team)$,title:^(Steam)$"
-        "float,class:^([Ss]team)$,title:^(Friends List)$"
-        "size 20% 75%,class:^([Ss]team)$,title:^(Friends List)$"
-        "center,class:^([Ss]team)$,title:^(Friends List)$"
-        "float,class:^([Ss]team)$,title:^(Add Non-Steam Game)$"
-        "center,class:^([Ss]team)$,title:^(Add Non-Steam Game)$"
-        "fullscreen,class:^([Ss]team)$,title:^(Steam Big Picture Mode)$"
-        "center,class:^([Ss]team)$,title:^(Steam Big Picture Mode)$"
+        ## "float,class:^([Ss]team)$,title:^(Steam)$"
+        # "size 75% 75%,class:^([Ss]team)$,title:^(Steam)$"
+        ## "center,class:^([Ss]team)$,title:^(Steam)$"
+        # "float,class:^([Ss]team)$,title:^(Friends List)$"
+        # "size 20% 75%,class:^([Ss]team)$,title:^(Friends List)$"
+        # "center,class:^([Ss]team)$,title:^(Friends List)$"
+        # "float,class:^([Ss]team)$,title:^(Add Non-Steam Game)$"
+        # "center,class:^([Ss]team)$,title:^(Add Non-Steam Game)$"
+        # "fullscreen,class:^([Ss]team)$,title:^(Steam Big Picture Mode)$"
+        # "center,class:^([Ss]team)$,title:^(Steam Big Picture Mode)$"
 
-        "fullscreen,class:^(com.libretro.RetroArch)$"
-        "center,class:^(com.libretro.RetroArch)$"
+        # "fullscreen,class:^(com.libretro.RetroArch)$"
+        # "center,class:^(com.libretro.RetroArch)$"
 
-        # Virt Manager Window rules
-        "float,class:^(virt-manager)$,title:^(Virtual Machine Manager)$"
-        "size 75% 75%,class:^(virt-manager)$,title:^(Virtual Machine Manager)$"
-        "center,class:^(virt-manager)$,title:^(Virtual Machine Manager)$"
+        # # Virt Manager Window rules
+        # "float,class:^(virt-manager)$,title:^(Virtual Machine Manager)$"
+        # "size 75% 75%,class:^(virt-manager)$,title:^(Virtual Machine Manager)$"
+        # "center,class:^(virt-manager)$,title:^(Virtual Machine Manager)$"
 
-        # Lutris Window rules
-        "float,class:^(lutris)$,title:^(Lutris)$"
-        "nomaxsize,class:^(dxwsetup.exe)$"
-        "float,class:^(epicgameslauncher.exe)$,title:^(Epic Games Launcher)$"
+        # # Lutris Window rules
+        # "float,class:^(lutris)$,title:^(Lutris)$"
+        # "nomaxsize,class:^(dxwsetup.exe)$"
+        # "float,class:^(epicgameslauncher.exe)$,title:^(Epic Games Launcher)$"
 
-        # Opacities
-        "opacity 0.8 0.8,class:^(com.mitchellh.ghostty)$"
-        "opacity 0.9 0.9,class:^(Code)$"
-        "opacity 0.99 0.99,class:^(firefox)$"
-        "opacity 0.9 0.9,class:^(discord)$"
+        # # Opacities
+        # "opacity 0.8 0.8,class:^(com.mitchellh.ghostty)$"
+        # "opacity 0.9 0.9,class:^(Code)$"
+        # "opacity 0.99 0.99,class:^(firefox)$"
+        # "opacity 0.9 0.9,class:^(discord)$"
 
-        # Thunar Window rules
-        "animation popin,class:^(thunar)$"
-        "opacity 0.8 0.8,class:^(thunar)$"
-        "float,class:^(thunar)$,title:^(File Operation Progress)$"
-        "pin,class:^(thunar)$,title:^(File Operation Progress)$"
-        "move 68.33% 88%,class:^(thunar)$,title:^(File Operation Progress)$"
-        "float,class:^(thunar)$,title:^(Confirm to replace files)$"
+        # # Thunar Window rules
+        # "animation popin,class:^(thunar)$"
+        # "opacity 0.8 0.8,class:^(thunar)$"
+        # "float,class:^(thunar)$,title:^(File Operation Progress)$"
+        # "pin,class:^(thunar)$,title:^(File Operation Progress)$"
+        # "move 68.33% 88%,class:^(thunar)$,title:^(File Operation Progress)$"
+        # "float,class:^(thunar)$,title:^(Confirm to replace files)$"
 
-        # Firefox Window rules
-        "float,class:^(firefox)$,title:^(Firefox — Sharing Indicator)$"
-        "float,class:^(firefox)$,title:^(Sign in – Google accounts — Mozilla Firefox)$"
-        "center,class:^(firefox)$,title:^(Sign in – Google accounts — Mozilla Firefox)$"
-        "move 38% 0.5%,class:^(firefox)$,title:^(Firefox — Sharing Indicator)$"
+        # # Firefox Window rules
+        # "float,class:^(firefox)$,title:^(Firefox — Sharing Indicator)$"
+        # "float,class:^(firefox)$,title:^(Sign in – Google accounts — Mozilla Firefox)$"
+        # "center,class:^(firefox)$,title:^(Sign in – Google accounts — Mozilla Firefox)$"
+        # "move 38% 0.5%,class:^(firefox)$,title:^(Firefox — Sharing Indicator)$"
 
-        # Transmission
-        "float,class:^(transmission-gtk)$,title:^(Transmission)$"
+        # # Transmission
+        # "float,class:^(transmission-gtk)$,title:^(Transmission)$"
 
-        # Utility
-        "float,class:^(.blueman-manager-wrapped)$"
-        "size 25% 25%,class:^(.blueman-manager-wrapped)$"
-        "float,class:^(openrgb)$,title:^(OpenRGB)$"
-        "float,class:^(org.pulseaudio.pavucontrol)$"
-        "size 28% 28%,class:^(org.pulseaudio.pavucontrol)$"
-        "float,title:^(Virtual Machine Manager)$"
-        "size 25% 25%,title:^(Virtual Machine Manager)$"
+        # # Utility
+        # "float,class:^(.blueman-manager-wrapped)$"
+        # "size 25% 25%,class:^(.blueman-manager-wrapped)$"
+        # "float,class:^(openrgb)$,title:^(OpenRGB)$"
+        # "float,class:^(org.pulseaudio.pavucontrol)$"
+        # "size 28% 28%,class:^(org.pulseaudio.pavucontrol)$"
+        # "float,title:^(Virtual Machine Manager)$"
+        # "size 25% 25%,title:^(Virtual Machine Manager)$"
       ];
     };
   };

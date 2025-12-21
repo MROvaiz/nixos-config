@@ -4,21 +4,21 @@
     amdgpu = {
       opencl.enable = true;
       initrd.enable = true;
-      amdvlk = {
-        enable = true;
-        support32Bit.enable = true;
-      };
+      # amdvlk = {
+      #   enable = true;
+      #   support32Bit.enable = true;
+      # };
     };
     graphics = {
       enable = true;
       enable32Bit = true;
       extraPackages = with pkgs; [
-        vaapiVdpau
+        libva-vdpau-driver
         libvdpau-va-gl
         rocmPackages.clr.icd # AMD required pkg
       ];
       extraPackages32 = with pkgs.pkgsi686Linux; [
-        vaapiVdpau
+        libva-vdpau-driver
         libvdpau-va-gl
         # rocmPackages.clr.icd # AMD required pkg
       ];
