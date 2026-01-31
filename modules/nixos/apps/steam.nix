@@ -62,6 +62,9 @@
     # PS
     pcsx2
 
+    # Epic Games, Gog
+    heroic
+
     # Vulkan tools
     vulkan-tools
     mesa-demos

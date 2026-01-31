@@ -12,6 +12,11 @@
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
+
+    # tools for video encoding
+    libva-utils
+    bc
+    execline
   ];
   services.caddy.virtualHosts = lib.mkIf (config.services.caddy.enable) {
     # "jellyfin.mrovaiz.duckdns.org".extraConfig = ''

@@ -158,7 +158,7 @@
         "match:class steam, match:title Steam Big Picture Mode, fullscreen on"
 
         ## Utilities
-        "match:class org.pulseaudio.pavucontrol, float on, center on, size 560 455"
+        "match:class org.pulseaudio.pavucontrol, float on, center on, size 590 455"
         "match:class .blueman-manager-wrapped, float on, center on, size 530 410"
         "match:title OpenRGB, float on, center on, size 920 410"
         "match:class transmission-gtk, float on, center on, size 400 600"
