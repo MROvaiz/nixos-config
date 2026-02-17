@@ -57,14 +57,14 @@ Replace `nixbin` with your desired host.
 ```bash
 nix flake update
 sudo nixos-rebuild switch --flake ./#nixbin  # For nixbin host
-nh os switch . -u # using nh for short command
+nh os switch . -u # using nh for short command: switch, test
 ```
 
 ### Clean System
 
 ```bash
 nix-collect-garbage -d  # Cleaning old configurations and Generations
-nh clean # using nh for short command
+nh clean all # using nh for short command
 ```
 
 ## Acknowledgments

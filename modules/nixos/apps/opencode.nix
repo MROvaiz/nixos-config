@@ -1,7 +1,5 @@
 {pkgs, ...}: {
-  # android tools
   environment.systemPackages = with pkgs; [
-    android-tools
-    pmbootstrap
+    opencode
   ];
 }

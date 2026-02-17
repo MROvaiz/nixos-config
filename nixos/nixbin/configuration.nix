@@ -21,6 +21,7 @@
     # outputs.nixosModules.apps.lutris
     outputs.nixosModules.apps.nh
     outputs.nixosModules.apps.obs
+    outputs.nixosModules.apps.opencode
     outputs.nixosModules.apps.openrgb
     outputs.nixosModules.apps.steam
     outputs.nixosModules.apps.thunar
@@ -59,7 +60,7 @@
     # outputs.nixosModules.service.docker
     # outputs.nixosModules.service.flatpak
     outputs.nixosModules.service.jellyfin
-    # outputs.nixosModules.service.ollama
+    outputs.nixosModules.service.ollama
     # outputs.nixosModules.service.sunshine
     # Terminal
     outputs.nixosModules.terminal.android

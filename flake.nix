@@ -102,17 +102,6 @@
         modules = [
           # > Our main nixos configuration file <
           ./nixos/nixbin/configuration.nix
-
-          # Import home-manager's NixOS module
-          # home-manager.nixosModules.home-manager
-          # {
-          #   home-manager = {
-          # useGlobalPkgs = true;
-          # useUserPackages = true;
-          # extraSpecialArgs = {inherit inputs outputs;};
-          #     users.mro = import ./home-manager/nixbin/home.nix;
-          #   };
-          # }
         ];
       };
       nixserve = lib.nixosSystem {
@@ -120,17 +109,6 @@
         modules = [
           # > Our main nixos configuration file <
           ./nixos/nixserve/configuration.nix
-
-          # Import home-manager's NixOS module
-          # home-manager.nixosModules.home-manager
-          # {
-          #   home-manager = {
-          #     # useGlobalPkgs = true;
-          #     useUserPackages = true;
-          #     extraSpecialArgs = {inherit inputs outputs;};
-          #     users.mro = import ./home-manager/nixserve/home.nix;
-          #   };
-          # }
         ];
       };
       nixwork = lib.nixosSystem {
@@ -138,17 +116,6 @@
         modules = [
           # > Our main nixos configuration file <
           ./nixos/nixwork/configuration.nix
-
-          # Import home-manager's NixOS module
-          # home-manager.nixosModules.home-manager
-          # {
-          #   home-manager = {
-          #     # useGlobalPkgs = true;
-          #     useUserPackages = true;
-          #     extraSpecialArgs = {inherit inputs outputs;};
-          #     users.mro = import ./home-manager/nixwork/home.nix;
-          #   };
-          # }
         ];
       };
       nixair = lib.nixosSystem {
@@ -156,17 +123,6 @@
         modules = [
           # > Our main nixos configuration file <
           ./nixos/nixair/configuration.nix
-
-          # Import home-manager's NixOS module
-          # home-manager.nixosModules.home-manager
-          # {
-          #   home-manager = {
-          #     # useGlobalPkgs = true;
-          #     useUserPackages = true;
-          #     extraSpecialArgs = {inherit inputs outputs;};
-          #     users.amf = import ./home-manager/nixair/home.nix;
-          #   };
-          # }
         ];
       };
     };

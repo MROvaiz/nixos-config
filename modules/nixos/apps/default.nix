@@ -5,6 +5,7 @@
   lutris = import ./lutris.nix;
   nh = import ./nh.nix;
   obs = import ./obs.nix;
+  opencode = import ./opencode.nix;
   openrgb = import ./openrgb.nix;
   steam = import ./steam.nix;
   thunar = import ./thunar.nix;

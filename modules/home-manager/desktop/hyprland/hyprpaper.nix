@@ -11,7 +11,11 @@ in {
         wallpaper
       ];
       wallpaper = [
-        ",${wallpaper}"
+        {
+          monitor = "";
+          path = wallpaper;
+          fit_mode = "fill";
+        }
       ];
     };
   };

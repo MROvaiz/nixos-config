@@ -15,7 +15,7 @@
     tree
 
     # screenshot
-    inputs.hyprwm-contrib.packages.${system}.grimblast # Screenshots.
+    inputs.hyprwm-contrib.packages.${pkgs.stdenv.hostPlatform.system}.grimblast
     grim
     slurp
     swappy

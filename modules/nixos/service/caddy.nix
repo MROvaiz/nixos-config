@@ -19,7 +19,7 @@
     # };
     package = pkgs.caddy.withPlugins {
       plugins = ["github.com/caddy-dns/duckdns@v0.5.0"];
-      hash = "sha256-HLVIm0BbzkbIIzqPXoSDxjLc+aKHaol7snutVaE/GtE=";
+      hash = "sha256-xVjw7QfnjdWIYGTfc4Ca91l8NeeEb/YKE8tMs4ctzTA=";
     };
     # virtualHosts = {
     #   # reverse_proxy is actual ip, which added in duckdns.
