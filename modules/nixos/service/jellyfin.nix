@@ -18,7 +18,7 @@
     bc
     execline
   ];
-  services.caddy.virtualHosts = lib.mkIf (config.services.caddy.enable) {
+  services.caddy.virtualHosts = lib.mkIf (config.services.caddy.enable && config ? sops && config.sops.secrets ? "duckdns/mrovaiz") {
     # "jellyfin.mrovaiz.duckdns.org".extraConfig = ''
     #   reverse_proxy localhost:8096
     #   tls {

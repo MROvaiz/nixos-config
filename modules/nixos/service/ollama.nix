@@ -6,11 +6,12 @@
   services = {
     ollama = {
       enable = true;
-      acceleration = "rocm";
+      package = pkgs.ollama-rocm;
       openFirewall = true;
 
       loadModels = [
-        "deepseek-r1:1.5b"
+        # "deepseek-r1:1.5b"
+        # "gpt-oss:20b"
         # "deepseek-r1:14b"
         # "deepseek-coder-v2"
       ];

@@ -1,5 +1,4 @@
-{colorscheme}:
-with colorscheme.colors; ''
+''
   /* CREATED BY KITTENZEXE */
 
   * {

@@ -12,6 +12,8 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
+    # sops-nix home-manager module
+    inputs.sops-nix.homeManagerModules.sops
     # Apps
     outputs.homeManagerModules.apps.discord
     outputs.homeManagerModules.apps.ghostty
@@ -31,6 +33,7 @@
     # Services
     # outputs.homeManagerModules.services.rclone # Disable
     # outputs.homeManagerModules.services.sunshine
+    outputs.homeManagerModules.services.openclaw
     # Settings
     outputs.homeManagerModules.settings.sound
     outputs.homeManagerModules.settings.virtmanager
@@ -41,6 +44,22 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
   ];
+  services.openclaw = {
+    enable = true;
+    allowedUsers = ["446928217962446848"];
+  };
+
+  sops = {
+    defaultSopsFile = "${inputs.self}/secrets/secrets.json";
+    age = {
+      keyFile = "/home/mro/.config/sops/age/keys.txt";
+    };
+    secrets = {
+      "openclaw/discord_bot" = {};
+      "openclaw/gateway_token" = {};
+      "openclaw/openrouter_api_key" = {};
+    };
+  };
 
   nixpkgs = {
     # You can add overlays here
