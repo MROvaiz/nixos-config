@@ -19,6 +19,7 @@
         "adbusers"
         "scanner"
         "lp"
+        "incus-admin"
       ];
     };
   };
