@@ -29,7 +29,7 @@ This repository contains my personal NixOS configuration using the Flakes featur
 ├── pkgs/            # Custom packages
 │   └── default.nix
 └── secrets/         # Secret management
-    └── secrets.yaml
+    └── secrets.json
 ```
 
 ## Usage
@@ -55,15 +55,12 @@ Replace `nixbin` with your desired host.
 ### Update System
 
 ```bash
-nix flake update
-sudo nixos-rebuild switch --flake ./#nixbin  # For nixbin host
-nh os switch . -u # using nh for short command: switch, test
+nh os switch . -u # using nh for short command: switch, test; -u for update flake
 ```
 
 ### Clean System
 
 ```bash
-nix-collect-garbage -d  # Cleaning old configurations and Generations
 nh clean all # using nh for short command
 ```
 
