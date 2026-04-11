@@ -1,4 +1,5 @@
 {
+  alacritty = import ./alacritty.nix;
   discord = import ./discord.nix;
   filezilla = import ./filezilla.nix;
   ghostty = import ./ghostty.nix;

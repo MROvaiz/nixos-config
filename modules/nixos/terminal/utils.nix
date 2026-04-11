@@ -6,7 +6,7 @@
   environment.systemPackages = with pkgs; [
     # Extra Utils
     ncdu
-    neofetch
+    fastfetch
     wget
     zip
     unzip
