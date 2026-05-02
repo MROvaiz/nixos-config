@@ -12,11 +12,13 @@
       pulse.enable = true;
       jack.enable = true;
       wireplumber.enable = true;
+      extraLadspaPackages = [ pkgs.rnnoise-plugin ];
     };
   };
+
   environment.systemPackages = with pkgs; [
-    # Enable sound.
     pavucontrol
     pamixer
+    rnnoise-plugin
   ];
 }

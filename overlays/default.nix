@@ -11,6 +11,7 @@
     # ...
     # });
     caddy-custom = prev.callPackage ./caddy-custom {};
+    surge-downloader = final.callPackage ./surge-downloader {};
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

@@ -8,6 +8,7 @@
   opencode = import ./opencode.nix;
   openrgb = import ./openrgb.nix;
   steam = import ./steam.nix;
+  surge-downloader = import ./surge-downloader.nix;
   thunar = import ./thunar.nix;
   transmission = import ./transmission.nix;
   virtualisation = import ./virtualisation.nix;

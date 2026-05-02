@@ -18,6 +18,7 @@
     outputs.nixosModules.apps.opencode
     outputs.nixosModules.apps.openrgb
     outputs.nixosModules.apps.steam
+    outputs.nixosModules.apps.surge-downloader
     outputs.nixosModules.apps.thunar
     outputs.nixosModules.apps.transmission
     outputs.nixosModules.apps.virtualisation
@@ -37,7 +38,7 @@
     outputs.nixosModules.hardware.mouse
     outputs.nixosModules.hardware.sound
     outputs.nixosModules.hardware.video
-    outputs.nixosModules.hardware.vr
+    # outputs.nixosModules.hardware.vr
 
     # Monitoring
     outputs.nixosModules.monitoring.btop
