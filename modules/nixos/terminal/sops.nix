@@ -20,6 +20,7 @@
     };
     secrets = {
       password = {};
+      netbird_key = {};
       "duckdns/mrovaiz" = {owner = "caddy";};
     };
   };

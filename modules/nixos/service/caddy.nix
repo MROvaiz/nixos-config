@@ -3,6 +3,8 @@
   config,
   ...
 }: {
+  networking.firewall.allowedTCPPorts = [80 443];
+
   services.caddy = {
     enable = true;
     email = "rahilovaiz@gmail.com";
@@ -19,7 +21,7 @@
     # };
     package = pkgs.caddy.withPlugins {
       plugins = ["github.com/caddy-dns/duckdns@v0.5.0"];
-      hash = "sha256-xVjw7QfnjdWIYGTfc4Ca91l8NeeEb/YKE8tMs4ctzTA=";
+      hash = "sha256-mj6tvFN2IehIAfocyyO3Adu0+ssYau8O7AzddsiSoys=";
     };
     # virtualHosts = {
     #   # reverse_proxy is actual ip, which added in duckdns.
