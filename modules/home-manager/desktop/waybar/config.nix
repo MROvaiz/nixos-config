@@ -40,6 +40,7 @@
       "tooltip-format" = "{:%Y-%m-%d}";
     };
     "hyprland/workspaces" = {
+      "interval" = 1;
       "format" = "{icon} {windows}";
       "window-rewrite-default" = "";
       "window-rewrite" = {
@@ -79,21 +80,21 @@
       "on-click-right" = "pavucontrol";
     };
     "cpu" = {
-      "interval" = 1;
+      "interval" = 10;
       "format" = " {usage}%";
     };
     "memory" = {
-      "interval" = 1;
-      "format" = " {used:0.1f}GB";
+      "interval" = 10;
+      "format" = " {used}GB";
     };
     "temperature" = {
-      "interval" = 1;
-      "thermal-zone" = 2;
+      "interval" = 10;
       "critical-threshold" = 80;
       "format-critical" = "{temperatureC}°C ";
       "format" = "{temperatureC}°C ";
     };
     "network" = {
+      "interval" = 10;
       "format" = "{ifname}";
       "format-wifi" = "{essid} ({signalStrength}%) ";
       "format-ethernet" = "{ifname} 󰈀";
@@ -106,6 +107,7 @@
     };
 
     "custom/logo" = {
+      "interval" = 0;
       "format" = "";
     };
 

@@ -21,21 +21,21 @@
       #   "DP-1,2560x1440@144,0x0,1"
       # ];
       monitorv2 = {
-        "output" = "DP-1";
+        "output" = "DP-2";
         "mode" = "2560x1440@144";
         "position" = "0x0";
         "scale" = 1;
         "bitdepth" = 10;
-        "cm" = "hdr";
-        "sdrbrightness" = 1.0;
-        "sdrsaturation" = 1.0;
+        "cm" = "srgb";
+        "sdrbrightness" = 1.5;
+        "sdrsaturation" = 1.1;
         "supports_wide_color" = 1;
         "supports_hdr" = 1;
         "sdr_min_luminance" = 0.005;
-        "sdr_max_luminance" = 200;
+        "sdr_max_luminance" = 300;
         "min_luminance" = 0;
         "max_luminance" = 1000;
-        "max_avg_luminance" = 200;
+        "max_avg_luminance" = 300;
       };
       exec-once = [
         # "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -80,7 +80,7 @@
         ];
       };
       dwindle = {
-        pseudotile = true;
+        # pseudotile = true;
         preserve_split = true;
       };
       # master = {
@@ -94,7 +94,7 @@
       };
       bind = [
         # Apps binds
-        "$MOD, Q, exec, ghostty"
+        "$MOD, Q, exec, kitty"
         "$MOD, C, killactive"
         "$MOD, M, exit"
         "$MOD, L, exec, hyprlock"
@@ -103,7 +103,7 @@
         "$MOD, F, fullscreen"
         "$MOD, SPACE, exec, rofi -show drun"
         "$MOD, P, pseudo"
-        "$MOD, J, togglesplit"
+        # "$MOD, J, togglesplit"
         ''$MOD, S, exec, grim -g "$(slurp)" - | swappy -f -'' # take a screenshot
 
         # Move Focus

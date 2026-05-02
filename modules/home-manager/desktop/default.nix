@@ -5,4 +5,5 @@
   rofi = import ./rofi;
   themes = import ./themes;
   waybar = import ./waybar;
+  quickshell = import ./quickshell;
 }
