@@ -25,6 +25,8 @@
       # "battery"
       "tray"
       "custom/icon-split"
+      "custom/hdr-status"
+      "custom/icon-split"
       "pulseaudio"
       "custom/icon-split"
       "pulseaudio#microphone"
@@ -165,6 +167,13 @@
       "format" = "";
       "tooltip" = false;
       "on-click" = "shutdown now";
+    };
+    "custom/hdr-status" = {
+      "exec" = "/home/mro/.local/bin/hdr-toggle --status";
+      "interval" = 5;
+      "format" = "{}";
+      "tooltip" = false;
+      "on-click" = "/home/mro/.local/bin/hdr-toggle";
     };
   };
 }

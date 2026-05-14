@@ -16,6 +16,7 @@
     ani-cli
     alejandra # Nix formatter
     nix-tree
+    jq
 
     # notifications
     libnotify

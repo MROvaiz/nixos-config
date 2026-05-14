@@ -7,6 +7,7 @@
 
   services.caddy = {
     enable = true;
+    acmeCA = null;
     email = "rahilovaiz@gmail.com";
     logFormat = "output file /var/log/caddy/error.log";
     # package = pkgs.caddy-custom.override {

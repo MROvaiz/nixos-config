@@ -28,6 +28,7 @@
     # outputs.homeManagerModules.desktop.quickshell
 
     # Services
+    outputs.homeManagerModules.services.opencode
     outputs.homeManagerModules.services.sops
 
     # Settings

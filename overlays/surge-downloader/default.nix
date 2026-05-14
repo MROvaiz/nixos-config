@@ -7,16 +7,16 @@
 }:
 buildGoModule (finalAttrs: {
   pname = "surge-downloader";
-  version = "0.8.3";
+  version = "0.8.6";
 
   src = fetchFromGitHub {
     owner = "surge-downloader";
     repo = "surge";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-6ISP7S5rcsjFQxXQGnqZ4jWgjNk98/npy7Z0pobIB98=";
+    hash = "sha256-o0GtuzqhCv39PRHeH1VXq4NLDgJoAQagIMlAkljY/Is=";
   };
 
-  vendorHash = "sha256-IGVt/HanZHglYSZ8WASrzqvTZZtK/bJpJzXNVqSqUfE=";
+  vendorHash = "sha256-tXJUr/URQZC+tNq+HOIuinaqbeElJMPWQH/MG1rY80I=";
 
   nativeBuildInputs = [
     writableTmpDirAsHomeHook

@@ -10,10 +10,10 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
-      gamescopeSession = {
-        # Optimized micro-compositor. Use the Steam launch option: gamescope %command%
-        enable = true;
-      };
+      # gamescopeSession = {
+      #   # Optimized micro-compositor. Use the Steam launch option: gamescope %command%
+      #   enable = true;
+      # };
       package = pkgs.steam.override {
         extraPkgs = pkgs':
           with pkgs'; [

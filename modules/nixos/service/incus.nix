@@ -2,8 +2,7 @@
   pkgs,
   lib,
   ...
-}:
-{
+}: {
   # Required: Enable nftables for Incus networking
   # Incus on NixOS requires nftables; iptables will fail
   networking.nftables.enable = true;

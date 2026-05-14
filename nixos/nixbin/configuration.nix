@@ -49,13 +49,16 @@
     outputs.nixosModules.networking.bluetooth
     outputs.nixosModules.networking.internet
     outputs.nixosModules.networking.nfs
-    outputs.nixosModules.networking.tailscale
+    outputs.nixosModules.networking.netbird
+    # outputs.nixosModules.networking.tailscale
     outputs.nixosModules.networking.wireguard
 
     # Services
     outputs.nixosModules.service.caddy
     outputs.nixosModules.service.incus
+    outputs.nixosModules.service.immich
     outputs.nixosModules.service.jellyfin
+    outputs.nixosModules.service.ollama
 
     # Terminal
     outputs.nixosModules.terminal.android

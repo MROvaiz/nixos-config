@@ -9,9 +9,17 @@
   imports = [
     inputs.hyprland.homeManagerModules.default
   ];
+  home.file = {
+    ".local/bin/hdr-toggle" = {
+      source = ./hdr-toggle.sh;
+      executable = true;
+    };
+  };
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    package = null; # Use NixOS module's hyprland
+    portalPackage = null; # Use NixOS module's portal
     settings = {
       "$MOD" = "SUPER";
       "$MODSHIFT" = "$MOD SHIFT";
@@ -21,21 +29,26 @@
       #   "DP-1,2560x1440@144,0x0,1"
       # ];
       monitorv2 = {
-        "output" = "DP-2";
+        "output" = ",";
         "mode" = "2560x1440@144";
         "position" = "0x0";
         "scale" = 1;
-        "bitdepth" = 10;
-        "cm" = "srgb";
-        "sdrbrightness" = 1.5;
-        "sdrsaturation" = 1.1;
+        "bitdepth" = 8;
+        "cm" = "auto";
+        "sdrbrightness" = 1;
+        "sdrsaturation" = 1;
         "supports_wide_color" = 1;
         "supports_hdr" = 1;
         "sdr_min_luminance" = 0.005;
-        "sdr_max_luminance" = 300;
+        "sdr_max_luminance" = 350;
         "min_luminance" = 0;
-        "max_luminance" = 1000;
+        "max_luminance" = 400;
         "max_avg_luminance" = 300;
+      };
+      render = {
+        "cm_auto_hdr" = 1;
+        "non_shader_cm" = 2;
+        "send_content_type" = true;
       };
       exec-once = [
         # "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -143,6 +156,9 @@
         # Move through existing workspaces
         "$MODALT, right, workspace, e+1"
         "$MODALT, left, workspace, e-1"
+
+        # HDR Toggle
+        "$MOD, H, exec, /home/mro/.local/bin/hdr-toggle"
       ];
       # Move/resize windows with mainMod + LMB/RMB and dragging
       bindm = [

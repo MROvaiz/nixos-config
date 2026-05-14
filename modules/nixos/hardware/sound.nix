@@ -12,7 +12,7 @@
       pulse.enable = true;
       jack.enable = true;
       wireplumber.enable = true;
-      extraLadspaPackages = [ pkgs.rnnoise-plugin ];
+      extraLadspaPackages = [pkgs.rnnoise-plugin];
     };
   };
 
